@@ -11,6 +11,7 @@ logo: images/NESC3505_icon.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
+  timeout: 300 # Increase to a suitable value in seconds
 
 # Define the name of the latex output file for PDF builds
 latex:
