@@ -491,7 +491,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="effects-of-light-intensity-on-spike-rate">
+  <section id="effects-of-light-intensity-on-spike-rate">
 <h1>Effects of Light Intensity on Spike Rate<a class="headerlink" href="#effects-of-light-intensity-on-spike-rate" title="Link to this heading">#</a></h1>
 <p>Now we’re going to load an even larger data set. The <code class="docutils literal notranslate"><span class="pre">ten_intensities</span></code> data set expands on the optogenetic spike train data we worked with in the previous chapter. Now we have data recorded from a neuron as it was stimulated with ten different intensities of the light that activates its receptors (550 nm green). We have 10 trials’ worth of data at each intensity, so 100 trials in total. Each trial was 20 ms long, with optical stimulation starting at 4 ms and ending at 14 ms. Measuring the neuron’s response across a range of intensities allows us to map out the response “profile” of the neuron in terms of the number of spikes elicited by differing intensities.</p>
 <hr class="docutils" />
@@ -647,76 +647,34 @@
   </thead>
   <tbody>
     <tr>
-      <th>167</th>
-      <td>8</td>
-      <td>4</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2</td>
-      <td>5</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>220</th>
-      <td>9</td>
-      <td>8</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>3</td>
-      <td>1</td>
-      <td>16</td>
-    </tr>
-    <tr>
       <th>212</th>
       <td>9</td>
       <td>5</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>168</th>
-      <td>8</td>
-      <td>4</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>57</th>
-      <td>5</td>
-      <td>6</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>81</th>
-      <td>6</td>
-      <td>4</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>3</td>
-      <td>1</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>76</th>
-      <td>6</td>
-      <td>2</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>219</th>
-      <td>9</td>
+      <th>136</th>
       <td>7</td>
-      <td>11</td>
+      <td>6</td>
+      <td>20</td>
     </tr>
     <tr>
-      <th>217</th>
-      <td>9</td>
+      <th>56</th>
+      <td>5</td>
+      <td>5</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>85</th>
       <td>6</td>
-      <td>11</td>
+      <td>5</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>226</th>
+      <td>9</td>
+      <td>9</td>
+      <td>9</td>
     </tr>
     <tr>
       <th>84</th>
@@ -725,16 +683,94 @@
       <td>12</td>
     </tr>
     <tr>
-      <th>133</th>
+      <th>29</th>
+      <td>3</td>
       <td>7</td>
-      <td>6</td>
       <td>11</td>
     </tr>
     <tr>
-      <th>208</th>
+      <th>174</th>
+      <td>8</td>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>170</th>
+      <td>8</td>
+      <td>5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>175</th>
+      <td>8</td>
+      <td>6</td>
       <td>9</td>
+    </tr>
+    <tr>
+      <th>193</th>
+      <td>8</td>
+      <td>9</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>7</td>
+      <td>2</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>6</td>
       <td>3</td>
-      <td>12</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>5</td>
+      <td>1</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>211</th>
+      <td>9</td>
+      <td>4</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>6</td>
+      <td>8</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>160</th>
+      <td>8</td>
+      <td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>177</th>
+      <td>8</td>
+      <td>6</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>2</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>5</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>201</th>
+      <td>9</td>
+      <td>1</td>
+      <td>11</td>
     </tr>
     <tr>
       <th>89</th>
@@ -749,51 +785,15 @@
       <td>11</td>
     </tr>
     <tr>
-      <th>24</th>
-      <td>3</td>
-      <td>3</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <th>150</th>
-      <td>8</td>
-      <td>0</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>142</th>
-      <td>7</td>
-      <td>8</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>118</th>
-      <td>7</td>
-      <td>2</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>7</td>
-      <td>7</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>61</th>
-      <td>5</td>
-      <td>7</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2</td>
-      <td>9</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0</td>
+      <th>70</th>
+      <td>6</td>
       <td>1</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>9</td>
+      <td>5</td>
       <td>18</td>
     </tr>
   </tbody>

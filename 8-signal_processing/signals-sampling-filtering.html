@@ -60,8 +60,6 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '8-signal_processing/signals-sampling-filtering';</script>
     <link rel="icon" href="../_static/NESC3505_icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -493,7 +491,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="signals-sampling-filtering">
+  <section id="signals-sampling-filtering">
 <h1>Signals, Sampling &amp; Filtering<a class="headerlink" href="#signals-sampling-filtering" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <div class="alert alert-block alert-info">
@@ -504,18 +502,16 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 <h2>Terminology<a class="headerlink" href="#terminology" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Frequency - number of cycles per unit time (usually seconds)</p></li>
-<li><p>Period - how long it takes a signal to go through a full cycle (e.g., 2<span class="math notranslate nohighlight">\(\pi\)</span> radians)</p></li>
+<li><p>Period - how long it takes a signal to go through a full cycle (e.g., 2$\pi$ radians)</p></li>
 <li><p>Phase - angular position (we won’t discuss phase very much here)</p></li>
 </ul>
 </section>
 <section id="time-domain-representation-of-signals">
 <h2>Time domain representation of signals<a class="headerlink" href="#time-domain-representation-of-signals" title="Link to this heading">#</a></h2>
-<p>This is how you are probably used to thinking about signals, namely how the magnitude of a signal varies over time. So for example a signal <span class="math notranslate nohighlight">\(s\)</span> containing a sinusoid with a period <span class="math notranslate nohighlight">\(T\)</span> of 0.5 seconds (a frequency of 2 Hz) and a peak-to-peak magnitude <span class="math notranslate nohighlight">\(b\)</span> of 2 volts is represented in the time domain <span class="math notranslate nohighlight">\(t\)</span> as:</p>
-<div class="math notranslate nohighlight">
-\[ s(t) = \left(\frac{b}{2}\right) \mathrm{sin}\left(wt\right) \]</div>
+<p>This is how you are probably used to thinking about signals, namely how the magnitude of a signal varies over time. So for example a signal $s$ containing a sinusoid with a period $T$ of 0.5 seconds (a frequency of 2 Hz) and a peak-to-peak magnitude $b$ of 2 volts is represented in the time domain $t$ as:</p>
+<p>$$ s(t) = \left(\frac{b}{2}\right) \mathrm{sin}\left(wt\right) $$</p>
 <p>where</p>
-<div class="math notranslate nohighlight">
-\[ w = \frac{2 \pi}{T} \]</div>
+<p>$$ w = \frac{2 \pi}{T} $$</p>
 <p>We can visualize the signal by plotting its magnitude as a function of time:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -553,13 +549,11 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 <section id="frequency-domain-representation-of-signals">
 <h2>Frequency domain representation of signals<a class="headerlink" href="#frequency-domain-representation-of-signals" title="Link to this heading">#</a></h2>
 <p>We can also represent signals in the frequency domain. This requires some understanding of the <a class="reference external" href="http://en.wikipedia.org/wiki/Fourier_series">Fourier series</a>. The idea of the Fourier series is that all periodic signals can be represented by (decomposed into) the sum of a set of pure sines and cosines that differ in frequency and period. See the wikipedia link for lots of details and a helpful animation.</p>
-<div class="math notranslate nohighlight">
-\[ s(t) = \frac{a_{0}}{2} + \sum_{n=1}^{\infty} \left[a_{n}\mathrm{cos}(nwt) + b_{n}\mathrm{sin}(nwt)\right] \]</div>
-<p>The coefficients <span class="math notranslate nohighlight">\(a_{n}\)</span> and <span class="math notranslate nohighlight">\(b_{n}\)</span> define the weighting of the different sines and cosines at different frequencies. In other words these coefficients represent the strength of the different frequency components in the signal.</p>
+<p>$$ s(t) = \frac{a_{0}}{2} + \sum_{n=1}^{\infty} \left[a_{n}\mathrm{cos}(nwt) + b_{n}\mathrm{sin}(nwt)\right] $$</p>
+<p>The coefficients $a_{n}$ and $b_{n}$ define the weighting of the different sines and cosines at different frequencies. In other words these coefficients represent the strength of the different frequency components in the signal.</p>
 <p>We can also represent the Fourier series using only sines:</p>
-<div class="math notranslate nohighlight">
-\[ s(t) = \frac{a_{0}}{2} \sum_{n=1}^{\infty} \left[r_{n}\mathrm{cos}(nwt-\phi_{n})\right] \]</div>
-<p>Using this formulation we now have <strong>magnitude</strong> coefficients <span class="math notranslate nohighlight">\(r_{n}\)</span> and <strong>phase</strong> coefficients <span class="math notranslate nohighlight">\(\phi_{n}\)</span>. That is, we are representing the original signal <span class="math notranslate nohighlight">\(s(t)\)</span> using a sum of sinusoids of different frequencies and phases.</p>
+<p>$$ s(t) = \frac{a_{0}}{2} \sum_{n=1}^{\infty} \left[r_{n}\mathrm{cos}(nwt-\phi_{n})\right] $$</p>
+<p>Using this formulation we now have <strong>magnitude</strong> coefficients $r_{n}$ and <strong>phase</strong> coefficients $\phi_{n}$. That is, we are representing the original signal $s(t)$ using a sum of sinusoids of different frequencies and phases.</p>
 <p>Here is a java applet that lets you play with how sines and cosines can be used to represent different signals: <a class="reference external" href="http://www.falstad.com/fourier/">Fourier Series Applet</a>.</p>
 </section>
 <section id="fast-fourier-transform-fft">
@@ -581,7 +575,8 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 <p>Let’s look at a concrete example that will illustrate this concept. Let’s assume we have a signal that we want to sample, and we choose a sampling rate of 4 Hz. This means every 250 ms we sample the signal. According to the Shannon-Nyquist theorem, the maximum frequency we can uniquely identify is half that, which is 2 Hz. This is called the <a class="reference external" href="http://en.wikipedia.org/wiki/Nyquist_frequency">nyquist frequency</a>. Let’s look at a plot and see why this is so.</p>
 <p>Below we see a solid blue line showing a 2 Hz signal, a magenta dashed line showing a 4 Hz signal, and a green dashed line showing a 8 Hz signal. Now imagine we sample these signals at 2 Hz, indicated by the vertical red lines. Notice that at the sample points (vertical red lines), the 2 Hz, 4 Hz and 8 Hz signals overlap with identical values. This means that on the basis of our 2 Hz samples, we cannot distinguish between frequencies of 2, 4 and 8 Hz. What’s more, what this means is that if the signal we are actually sampling at 2 Hz has significant signal power at frequencies above the Nyquist (1 Hz) then the power at these higher frequencies will influence our estimates of the magnitude coefficients corresponding to frequencies below the Nyquist… in other words the high-frequency power will be aliased into the lower frequency estimates.</p>
 <!-- ![signal_aliasing.jpg](signal-aliasing.jpg) -->
-<img src="signal-aliasing.jpg" width=700><p>Below is another example taken from the <a class="reference external" href="http://en.wikipedia.org/wiki/Aliasing">wikipedia article on aliasing</a>. Here we have two sinusoids — one at 0.1 Hz (blue) and another at 0.9 Hz (red). We sample both at a sampling rate of 1 Hz (vertical green lines). You can see that at the sample points, both the 0.1 Hz and 0.9 Hz sinusoids “hit” the sample points and thus both would influence our estimates of the power at the 0.1 Hz frequency. Since the sampling rate is 1 Hz, the Nyquist frequency (the maximum frequency we can distinguish) is 0.5 Hz - and so any power in the signal above 0.5 Hz (such as 0.9 Hz) will be aliased down into the lower frequencies (in this case into the 0.1 Hz band).</p>
+<a class="reference internal image-reference" href="../_images/signal-aliasing.jpg"><img alt="../_images/signal-aliasing.jpg" src="../_images/signal-aliasing.jpg" style="width: 700px;" /></a>
+<p>Below is another example taken from the <a class="reference external" href="http://en.wikipedia.org/wiki/Aliasing">wikipedia article on aliasing</a>. Here we have two sinusoids — one at 0.1 Hz (blue) and another at 0.9 Hz (red). We sample both at a sampling rate of 1 Hz (vertical green lines). You can see that at the sample points, both the 0.1 Hz and 0.9 Hz sinusoids “hit” the sample points and thus both would influence our estimates of the power at the 0.1 Hz frequency. Since the sampling rate is 1 Hz, the Nyquist frequency (the maximum frequency we can distinguish) is 0.5 Hz - and so any power in the signal above 0.5 Hz (such as 0.9 Hz) will be aliased down into the lower frequencies (in this case into the 0.1 Hz band).</p>
 <p><img alt="signal-aliasing.jpg" src="../_images/signal-aliasing-sines.jpg" /></p>
 </div><p>So the message here is that in advance, before choosing your sampling rate, you should have some knowledge about the highest frequency that you (a) are interested in identifying; and (b) you think is a real component in the signal (as opposed to random noise). In cases where you have no a priori knowledge about the expected frequency content, one strategy is to remove high frequency components <em>before sampling</em>. This can be accomplished using low-pass filtering — sometimes called anti-aliasing filters. Once the signal has been sampled, it’s too late to perform anti-aliasing.</p>
 </section>
@@ -591,7 +586,8 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 <p>For a given signal, the collection of magnitude coefficients gives a description of the signal in terms of the strength of the various underlying frequency components. For our immediate purposes these magnitude coefficients will be most important to us and we can for the moment set aside the phase coefficients.</p>
 <p>Here is an example of a power spectrum for a pure 10 Hz signal, sampled at 100 Hz.</p>
 <!-- ![](signal_spectrum10.jpg) -->
-<img src="signal_spectrum10.jpg" width=800><p>The magnitude values are zero for every frequency except 10 Hz. We haven’t plotted the phase coefficients. The set of magnitude and phase coefficients derived from a Fourier analysis is a complete description of the underlying signal, with one caveat — only frequencies up to the Nyquist are represented. So the idea here is that one can go between the original time-domain representation of the signal and this frequency domain representation of the signal without losing information. As we shall see below in the section on filtering, we can perform operations in the frequency domain and then transform back into the time domain.</p>
+<a class="reference internal image-reference" href="../_images/signal_spectrum10.jpg"><img alt="../_images/signal_spectrum10.jpg" src="../_images/signal_spectrum10.jpg" style="width: 800px;" /></a>
+<p>The magnitude values are zero for every frequency except 10 Hz. We haven’t plotted the phase coefficients. The set of magnitude and phase coefficients derived from a Fourier analysis is a complete description of the underlying signal, with one caveat — only frequencies up to the Nyquist are represented. So the idea here is that one can go between the original time-domain representation of the signal and this frequency domain representation of the signal without losing information. As we shall see below in the section on filtering, we can perform operations in the frequency domain and then transform back into the time domain.</p>
 <p>Here is some Python code to illustrate these concepts. We construct a one second signal sampled at 1000 Hz that is composed of a 6 Hz, 10 Hz and 13 Hz components. We then use the <code class="docutils literal notranslate"><span class="pre">fft()</span></code> function to compute the Fast Fourier transform, we extract the magnitude information, we set our frequency range (up to the Nyquist) and we plot the <strong>spectrum</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -659,7 +655,7 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f4d6be22ddbd48cf1af01e17ff538cf12719be5155b9fa7f9169e4e2ee5b8096.png" src="../_images/f4d6be22ddbd48cf1af01e17ff538cf12719be5155b9fa7f9169e4e2ee5b8096.png" />
+<img alt="../_images/82f1cb4b62f0dfed9c2645bcfe4cd41d551e1e01b068785a597ae706b1c63ea4.png" src="../_images/82f1cb4b62f0dfed9c2645bcfe4cd41d551e1e01b068785a597ae706b1c63ea4.png" />
 </div>
 </div>
 <p>In the Figure above you can see that the peak at 12 Hz stands nicely above all the noise in the power spectral density estimate (bottom panel).</p>
@@ -669,12 +665,11 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 <h2>Decibel scale<a class="headerlink" href="#decibel-scale" title="Link to this heading">#</a></h2>
 <p>The decibel (dB) scale is a ratio scale. It is commonly used to measure sound level but is also widely used in electronics and signal processing. The dB is a logarithmic unit used to describe a ratio. You will often see power spectra displayed in units of decibels.</p>
 <p>The difference between two sound levels (or two power levels, as in the case of the power spectra above), is defined to be:</p>
-<div class="math notranslate nohighlight">
-\[ 20 \text{log}_{10} \left(\frac{P_{2}}{P_{1}}\right)dB \]</div>
-<p>Thus when <span class="math notranslate nohighlight">\(P_{2}\)</span> is twice as large as <span class="math notranslate nohighlight">\(P_{1}\)</span>, then the difference is about 6 dB. When <span class="math notranslate nohighlight">\(P_{2}\)</span> is 10 times as large as <span class="math notranslate nohighlight">\(P_{1}\)</span>, the difference is 20 dB. A 100 times difference is 40 dB.</p>
+<p>$$ 20 \text{log}<em>{10} \left(\frac{P</em>{2}}{P_{1}}\right)dB $$</p>
+<p>Thus when $P_{2}$ is twice as large as $P_{1}$, then the difference is about 6 dB. When $P_{2}$ is 10 times as large as $P_{1}$, the difference is 20 dB. A 100 times difference is 40 dB.</p>
 <p>An advantage of using the dB scale is that it is easier to see small signal components in the presence of large ones. In other words large components don’t visually swamp small ones.</p>
 <p>Since the dB scale is a ratio scale, to compute absolute levels one needs a reference — a zero point. In acoustics this reference is usually 20 micropascals — about the limit of sensitivity of the human ear.</p>
-<p>For our purposes in the absence of a meaningful reference we can use 1.0 as the reference (i.e. as <span class="math notranslate nohighlight">\(P_{1}\)</span> in the above equation).</p>
+<p>For our purposes in the absence of a meaningful reference we can use 1.0 as the reference (i.e. as $P_{1}$ in the above equation).</p>
 </section>
 <section id="spectrogram">
 <h2>Spectrogram<a class="headerlink" href="#spectrogram" title="Link to this heading">#</a></h2>
@@ -824,10 +819,12 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 <p>The <strong>pass band</strong> of a filter is the range of frequencies over which signals pass with no change. The <strong>stop band</strong> refers to the range of frequencies over which a filter attenuates signals. The <strong>cutoff frequency</strong> or <strong>corner frequency</strong> of a filter is used to describe the transition point from the pass band to the reject band. Since this transition cannot occur instantaneously it is usually defined to be the point at which the filter output is equal to -6 dB of the input in the pass band. The cutoff frequency is sometimes called the -6 dB point or the half-power point since -6 dB corresponds to half the signal power. The <strong>roll-off</strong> refers to the rate at which the filter attenuates the input after the cutoff point. When the roll-off is linear it can be specified as a specific slope, e.g. in terms of dB/decade or dB/octave (an octave is a doubling in frequency).</p>
 <p>Let’s look at some examples of filter characteristics.</p>
 <!-- ![signal_bode.jpg](signal_bode.jpg) -->
-<img src="signal_bode.jpg" width=500><p>Here the blue trace shows the power spectrum for the unfiltered signal. The red trace shows a lowpass-filtered version of the signal with a cutoff frequency of 30 Hz. The green trace shows a low-pass with a cutoff frequency of 130 Hz. Also notice that the roll-off of the 30 Hz lowpass is not as great as for the 130 Hz lowpass, which has a higher roll-off.</p>
+<a class="reference internal image-reference" href="../_images/signal_bode.jpg"><img alt="../_images/signal_bode.jpg" src="../_images/signal_bode.jpg" style="width: 500px;" /></a>
+<p>Here the blue trace shows the power spectrum for the unfiltered signal. The red trace shows a lowpass-filtered version of the signal with a cutoff frequency of 30 Hz. The green trace shows a low-pass with a cutoff frequency of 130 Hz. Also notice that the roll-off of the 30 Hz lowpass is not as great as for the 130 Hz lowpass, which has a higher roll-off.</p>
 <p>Here are the corresponding signals shown in the time-domain:</p>
 <!-- ![signal_bodetime.jpg](signal_bodetime.jpg) -->
-<img src="signal_bodetime.jpg" width=600><p>So we see a very good example of how low-pass filtering can be used very effectively to filter out random noise. Key is the appropriate choice of cut-off frequency.</p>
+<a class="reference internal image-reference" href="../_images/signal_bodetime.jpg"><img alt="../_images/signal_bodetime.jpg" src="../_images/signal_bodetime.jpg" style="width: 600px;" /></a>
+<p>So we see a very good example of how low-pass filtering can be used very effectively to filter out random noise. Key is the appropriate choice of cut-off frequency.</p>
 </section>
 <section id="common-filters">
 <h3>Common Filters<a class="headerlink" href="#common-filters" title="Link to this heading">#</a></h3>
@@ -919,7 +916,7 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b1effaa376da08aa24e0f51a918b03bd3db70d1e85cf4f39ad0a5c32519f422b.png" src="../_images/b1effaa376da08aa24e0f51a918b03bd3db70d1e85cf4f39ad0a5c32519f422b.png" />
+<img alt="../_images/f398619c768992222730ed85d3ab5cafc1d98bacffedef8e0649b4795449259f.png" src="../_images/f398619c768992222730ed85d3ab5cafc1d98bacffedef8e0649b4795449259f.png" />
 </div>
 </div>
 <p>The top panel shows position in one coordinate over time. The middle panel shows the result of taking the derivative of the position signal to obtain velocity. I have simply used the <code class="docutils literal notranslate"><span class="pre">diff()</span></code> function here to obtain a numerical estimate of the derivative, taking the forward difference. Note how much noisier it looks than the position signal. Finally the bottom panel shows the result of taking the derivative of the velocity signal, to obtain acceleration. It is so noisy one cannot even see the peaks in the acceleration signal, they are completely masked by noise.</p>
@@ -948,7 +945,7 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6c3742365e1c27e3672761b8574e6d0b177b7f50732e185d1298b79a735e10e5.png" src="../_images/6c3742365e1c27e3672761b8574e6d0b177b7f50732e185d1298b79a735e10e5.png" />
+<img alt="../_images/2d7a1ff1a6f3353fbd8ef29bcaa54db1ede130f5b883e398eedc3e10ebd0a2da.png" src="../_images/2d7a1ff1a6f3353fbd8ef29bcaa54db1ede130f5b883e398eedc3e10ebd0a2da.png" />
 </div>
 </div>
 <p>What you can see is that for the position over time, the filtered version (shown in red) doesn’t differ that much, at least not visibly, from the unfiltered version (in blue). The velocity and acceleration traces however look vastly different. Differentiating the filtered position signal yields a velocity trace (shown in red in the middle panel) that is way less noisy than the original version. Taking the derivative again of this new velocity signal yields an acceleration signal (shown in red in the bottom panel) that is actually usable. The original version (shown in blue) is so noisy it overwhelms the entire panel. Note the scale change on the ordinate.</p>
@@ -957,12 +954,13 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 <section id="quantization">
 <h2>Quantization<a class="headerlink" href="#quantization" title="Link to this heading">#</a></h2>
 <p>Converting an analog signal to a digital form involves the quantization of the analog signal. In this procedure the range of the input variable is divided into a set of class intervals. Quantization involves the replacement of each value of the input variable by the nearest class interval centre.</p>
-<p>Another way of saying this is that when sampling an analog signal and converting it to digital values, one is limited by the precision with which one can represent the (analog) signal digitally. Usually a piece of hardware called an analog-to-digital (A/D) board is the thing that performs this conversion. The range of A/D boards are usually specified in terms of <strong>bits</strong>. For example a 12-bit A/D board is capable of specifying <span class="math notranslate nohighlight">\(2^{12}=4096\)</span> unique values. This means that a continuous signal will be represented using only 4096 possible values. A 16-bit A/D board would be capable of using <span class="math notranslate nohighlight">\(2^{16}=65,536\)</span> different values. Obviously the higher the better, in terms of the resolution of the underlying digital representation. Often however in practice, higher resolutions come at the expense of lower sampling rates.</p>
+<p>Another way of saying this is that when sampling an analog signal and converting it to digital values, one is limited by the precision with which one can represent the (analog) signal digitally. Usually a piece of hardware called an analog-to-digital (A/D) board is the thing that performs this conversion. The range of A/D boards are usually specified in terms of <strong>bits</strong>. For example a 12-bit A/D board is capable of specifying $2^{12}=4096$ unique values. This means that a continuous signal will be represented using only 4096 possible values. A 16-bit A/D board would be capable of using $2^{16}=65,536$ different values. Obviously the higher the better, in terms of the resolution of the underlying digital representation. Often however in practice, higher resolutions come at the expense of lower sampling rates.</p>
 <p>As an example, let’s look at a continuous signal and its digital representation using a variety of (low) sample resolutions:</p>
 <!-- ![signal_quantization.jpg](signal_quantization.jpg) -->
-<img src="signal_quantization.jpg" width=600><p>Here we see as the number of possible unique values increases, the digital representation of the underlying continuous signal gets more and more accurate. Also notice that in general, quantization adds noise to the representation of the signal.</p>
+<a class="reference internal image-reference" href="../_images/signal_quantization.jpg"><img alt="../_images/signal_quantization.jpg" src="../_images/signal_quantization.jpg" style="width: 600px;" /></a>
+<p>Here we see as the number of possible unique values increases, the digital representation of the underlying continuous signal gets more and more accurate. Also notice that in general, quantization adds noise to the representation of the signal.</p>
 <p>It is also important to consider the amplitude of the sampled signal compared to the range of the A/D board. In other words, if the signal you are sampling has a very small amplitude compared to the range of the A/D board then essentially your sample will only be occupying a small subset of the total possible values dictated by the resolution of the A/D board, and the effects of quantization will be greatly increased.</p>
-<p>For example, let’s say you are using an A/D board with 12 bits of resolution and an input range of +/- 5 Volts. This means that you have <span class="math notranslate nohighlight">\(2^{12}=4096\)</span> possible values with which to characterize a signal that ranges maximally over 10 Volts. If your signal is very small compared to this range, e.g. if it only occupies 25 millivolts, then the A/D board is only capable of using <span class="math notranslate nohighlight">\(0.0025/10*4096 = 10\)</span> (ten) unique values to characterize your signal! The resulting digitized characterization of your signal will not be very smooth.</p>
+<p>For example, let’s say you are using an A/D board with 12 bits of resolution and an input range of +/- 5 Volts. This means that you have $2^{12}=4096$ possible values with which to characterize a signal that ranges maximally over 10 Volts. If your signal is very small compared to this range, e.g. if it only occupies 25 millivolts, then the A/D board is only capable of using $0.0025/10*4096 = 10$ (ten) unique values to characterize your signal! The resulting digitized characterization of your signal will not be very smooth.</p>
 <p>Whenever possible, amplify your signal to occupy the maximum range of the A/D board you’re using. Of course the trick is always to amplify the signal without also amplifying the noise!</p>
 </section>
 <section id="sources-of-noise">

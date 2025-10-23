@@ -60,8 +60,6 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '3-python/variables_assignment';</script>
     <link rel="icon" href="../_static/NESC3505_icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -501,7 +499,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="variables-and-assignment">
+  <section id="variables-and-assignment">
 <h1>Variables and Assignment<a class="headerlink" href="#variables-and-assignment" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <section id="questions">
@@ -790,7 +788,7 @@ so <code class="docutils literal notranslate"><span class="pre">Name</span></cod
 <section id="translating-equations-into-python">
 <h3>Translating equations into Python<a class="headerlink" href="#translating-equations-into-python" title="Link to this heading">#</a></h3>
 <p>Another thing to keep in mind when writing mathematical expressions is that, while you will see many equations in textbooks, websites, papers, etc. that use square brackets, like in this equation:
-<span class="math notranslate nohighlight">\(y = \left[\frac{x}{(1-z)}\right] + \left[\frac{x^2}{\frac{1}{x^2}+z}\right]\)</span></p>
+$y = \left[\frac{x}{(1-z)}\right] + \left[\frac{x^2}{\frac{1}{x^2}+z}\right]$</p>
 <p>In Python, round parentheses [brackets] (i.e., <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code>) are used for equations. Square brackets are used for lists and indexing (locating an item or items in a data container). So, the above equation, could be written as follows in Python:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">z</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">z</span><span class="p">))</span>
 </pre></div>
@@ -865,14 +863,14 @@ False
 </div>
 <div class="alert alert-block alert-info">
     <h3>Style note:</h3>
-<p>Although Python allows you to use virtually any characters in variable names, there are style conventions that you should learn and follow. Python PEP 8](<a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#naming-conventions">https://www.python.org/dev/peps/pep-0008/#naming-conventions</a>) (PEPs are the “Python Enhancement Proposals” that provide standards for the language) specifies that regular variables “should be lowercase, with words separated by underscores as necessary to improve readability”.</p>
+<p>Although Python allows you to use virtually any characters in variable names, there are style conventions that you should learn and follow. Python PEP 8](https://www.python.org/dev/peps/pep-0008/#naming-conventions) (PEPs are the “Python Enhancement Proposals” that provide standards for the language) specifies that regular variables “should be lowercase, with words separated by underscores as necessary to improve readability”.</p>
 <p>So, <strong>you should only use lower-case letters</strong> in variable names. This is because upper-case letters are used for specific purposes in Python. As well, if your variable name is more than one word (such as <code class="docutils literal notranslate"><span class="pre">first_name</span></code>), you should use underscores to separate the words. This naming convention is called <strong>snake case</strong>.</p>
 <p>You may encounter different conventions as standard in other programming languages (or in examples of Python that don’t properly follow style conventions), such as <a class="reference external" href="https://en.wikipedia.org/wiki/Camel_case"><strong>camel case</strong></a> which would be <code class="docutils literal notranslate"><span class="pre">FirstName</span></code> or possibly <code class="docutils literal notranslate"><span class="pre">firstName</span></code> (for the aficionados: the first is is a sub-type of camel case called <strong>Pascal case</strong>, while the second is <strong>dromedary case</strong>).</p>
 <p>There is a good reason for following these conventions: when a seasoned Python programmer sees something in camel case, they will expect it to be a class or type variable, not a regular variable. Following Python’s conventions thus improves the readability, sharability, and transparency of code. Lastly, another advantage to following coding style conventions is that less time and energy needs to be spent on decision-making related to lower-level implementational details, freeing your mind up to focus more on what you want to accomplish with your code.</p>
 </div></section>
 </section>
 <hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="exercises">
+<section id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
 <section id="what-s-in-a-name">
 <h2>What’s in a name?<a class="headerlink" href="#what-s-in-a-name" title="Link to this heading">#</a></h2>
