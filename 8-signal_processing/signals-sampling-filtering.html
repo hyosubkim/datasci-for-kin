@@ -655,7 +655,7 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/82f1cb4b62f0dfed9c2645bcfe4cd41d551e1e01b068785a597ae706b1c63ea4.png" src="../_images/82f1cb4b62f0dfed9c2645bcfe4cd41d551e1e01b068785a597ae706b1c63ea4.png" />
+<img alt="../_images/87db99b130291cdb5d7048d8a88753e1fe141b178a79e7769434252523a7e286.png" src="../_images/87db99b130291cdb5d7048d8a88753e1fe141b178a79e7769434252523a7e286.png" />
 </div>
 </div>
 <p>In the Figure above you can see that the peak at 12 Hz stands nicely above all the noise in the power spectral density estimate (bottom panel).</p>
@@ -916,7 +916,7 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f398619c768992222730ed85d3ab5cafc1d98bacffedef8e0649b4795449259f.png" src="../_images/f398619c768992222730ed85d3ab5cafc1d98bacffedef8e0649b4795449259f.png" />
+<img alt="../_images/bc2bc0a8c6427ab0bce06547ef994e519a95ae2435509f111bb76c227b37072b.png" src="../_images/bc2bc0a8c6427ab0bce06547ef994e519a95ae2435509f111bb76c227b37072b.png" />
 </div>
 </div>
 <p>The top panel shows position in one coordinate over time. The middle panel shows the result of taking the derivative of the position signal to obtain velocity. I have simply used the <code class="docutils literal notranslate"><span class="pre">diff()</span></code> function here to obtain a numerical estimate of the derivative, taking the forward difference. Note how much noisier it looks than the position signal. Finally the bottom panel shows the result of taking the derivative of the velocity signal, to obtain acceleration. It is so noisy one cannot even see the peaks in the acceleration signal, they are completely masked by noise.</p>
@@ -945,7 +945,7 @@ This chapter was copied and lightly adapted (mostly code edits) from Paul Gribbl
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2d7a1ff1a6f3353fbd8ef29bcaa54db1ede130f5b883e398eedc3e10ebd0a2da.png" src="../_images/2d7a1ff1a6f3353fbd8ef29bcaa54db1ede130f5b883e398eedc3e10ebd0a2da.png" />
+<img alt="../_images/569a5c14947a4d8bdeb74d7f26724981bb956e4a6824b17e5263e96b5f581f77.png" src="../_images/569a5c14947a4d8bdeb74d7f26724981bb956e4a6824b17e5263e96b5f581f77.png" />
 </div>
 </div>
 <p>What you can see is that for the position over time, the filtered version (shown in red) doesn’t differ that much, at least not visibly, from the unfiltered version (in blue). The velocity and acceleration traces however look vastly different. Differentiating the filtered position signal yields a velocity trace (shown in red in the middle panel) that is way less noisy than the original version. Taking the derivative again of this new velocity signal yields an acceleration signal (shown in red in the bottom panel) that is actually usable. The original version (shown in blue) is so noisy it overwhelms the entire panel. Note the scale change on the ordinate.</p>
