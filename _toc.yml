@@ -23,7 +23,7 @@ parts:
     #   - file: 1-intro/mindset
     #   - file: 1-intro/errors_debugging
     #   - file: 1-intro/teamwork
-    - file: 1_intro/learning_approach 
+    - file: 1-intro/learning_approach 
       sections:
       - file: 1-intro/mindset
       - file: 1-intro/errors_debugging

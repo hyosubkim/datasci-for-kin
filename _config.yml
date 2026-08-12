@@ -44,3 +44,4 @@ html:
   
 # Disable building all files in book directory by default
 only_build_toc_files: true
+
