@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -509,7 +509,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="introduction-to-plotting-with-matplotlib">
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-plotting-with-matplotlib">
 <h1>Introduction to Plotting with Matplotlib<a class="headerlink" href="#introduction-to-plotting-with-matplotlib" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <section id="questions">
@@ -572,7 +572,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x11e4e2a50&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1115faa50&gt;]
 </pre></div>
 </div>
 <img alt="../_images/0aed93a807c3574027dc992c119e39932224d9f01e67c65627ae1981eff2a066.png" src="../_images/0aed93a807c3574027dc992c119e39932224d9f01e67c65627ae1981eff2a066.png" />
@@ -636,17 +636,6 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/gapminder_gdp_oceania.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/gapminder_gdp_oceania.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>
@@ -762,7 +751,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/824c48f3e0eb96179ded6e020ef2a472e4605534a8a5045f0f59c728b60df227.png" src="../_images/824c48f3e0eb96179ded6e020ef2a472e4605534a8a5045f0f59c728b60df227.png" />
+<img alt="../_images/1d146f47efbc12c4dfa78d85544da38d5aea4f89d8f9a533e767183cce0b82f5.png" src="../_images/1d146f47efbc12c4dfa78d85544da38d5aea4f89d8f9a533e767183cce0b82f5.png" />
 </div>
 </div>
 <p>We get a plot all right, but it’s not the most intuitive way to look at the data. What happened here?</p>
@@ -780,7 +769,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5f60c48c48be111642e681dfcd0b753248b60de464358f2941c8a6884f4939e4.png" src="../_images/5f60c48c48be111642e681dfcd0b753248b60de464358f2941c8a6884f4939e4.png" />
+<img alt="../_images/ad01fcb24a6942a6b592897e93c7dc5e1578186789559a689bea3aa8cdf557bd.png" src="../_images/ad01fcb24a6942a6b592897e93c7dc5e1578186789559a689bea3aa8cdf557bd.png" />
 </div>
 </div>
 <p>You can see above that pandas + Matplotlib also recognizes the index of the DataFrame as labels, so a legend is automatically generated with the country names.</p>
@@ -990,7 +979,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4945041854a8749a73279a6ef2ae2358817d9e18b222a513ff248e7d014107a8.png" src="../_images/4945041854a8749a73279a6ef2ae2358817d9e18b222a513ff248e7d014107a8.png" />
+<img alt="../_images/4244d39746ebf7406410a175acd2dffade17c67c24775897e5996e3b6b3236b4.png" src="../_images/4244d39746ebf7406410a175acd2dffade17c67c24775897e5996e3b6b3236b4.png" />
 </div>
 </div>
 <p>Look at the DataFrame now, to see the result:</p>
@@ -1107,7 +1096,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2ee3fb9a7231a7f28315ee4e48b1ef23034917335eb18b1d363971d27d224754.png" src="../_images/2ee3fb9a7231a7f28315ee4e48b1ef23034917335eb18b1d363971d27d224754.png" />
+<img alt="../_images/4db77e3ffac34a0ea1190cb309c3a7a41b5635c787ad11e5ea722bdf7de90d86.png" src="../_images/4db77e3ffac34a0ea1190cb309c3a7a41b5635c787ad11e5ea722bdf7de90d86.png" />
 </div>
 </div>
 <section id="selecting-subsets-of-a-dataframe">
@@ -1126,7 +1115,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7c9d27f86102be422648054aae8c963f75f2c6f390c612bc15b2031c74024e27.png" src="../_images/7c9d27f86102be422648054aae8c963f75f2c6f390c612bc15b2031c74024e27.png" />
+<img alt="../_images/5d8e9156fdff842f53b68b6719f7f6fe921a707debc18a8a059130264b22d481.png" src="../_images/5d8e9156fdff842f53b68b6719f7f6fe921a707debc18a8a059130264b22d481.png" />
 </div>
 </div>
 <p>We can customize this using the <code class="docutils literal notranslate"><span class="pre">color</span></code> and <code class="docutils literal notranslate"><span class="pre">linestyle</span></code> kwargs. Note that if we’re only passing a single value to a kwarg, we don’t use a list:</p>
@@ -1142,7 +1131,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/56879cfe2d092cfc17beed0e7f249544696f2cd4d6a2bec907ac0f4329129080.png" src="../_images/56879cfe2d092cfc17beed0e7f249544696f2cd4d6a2bec907ac0f4329129080.png" />
+<img alt="../_images/9916589a9b2509f6693e052fef624fbab7076bfe1ecc46f9abfd3d6eff9bc856.png" src="../_images/9916589a9b2509f6693e052fef624fbab7076bfe1ecc46f9abfd3d6eff9bc856.png" />
 </div>
 </div>
 </section>
@@ -1162,6 +1151,9 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c4c50b82107086155eef1eee9eed8f77e9941a1edc5fc1b4a5402c4b62250995.png" src="../_images/c4c50b82107086155eef1eee9eed8f77e9941a1edc5fc1b4a5402c4b62250995.png" />
 </div>
 </div>
 <p>Something to get used to is that some plot styles can be defined as keyword arguments to <code class="docutils literal notranslate"><span class="pre">.plot()</span></code>, as above, others can be generated using subfunctions of <code class="docutils literal notranslate"><span class="pre">.plot</span></code>, such as <code class="docutils literal notranslate"><span class="pre">.plot.scatter()</span></code>, as below. Often, you can use either one to get the same result. It’s often the case in Python that there are many different ways to do the same thing!</p>
@@ -1186,7 +1178,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3d7b1a9277121e6b44b802904dc5d17b9793ad4790abceeb5ec35421848cf66f.png" src="../_images/3d7b1a9277121e6b44b802904dc5d17b9793ad4790abceeb5ec35421848cf66f.png" />
+<img alt="../_images/ca31315647ffc3d46cbfa58ebe414d339a4037a290584d1a877bf2527a2acee7.png" src="../_images/ca31315647ffc3d46cbfa58ebe414d339a4037a290584d1a877bf2527a2acee7.png" />
 </div>
 </div>
 </section>

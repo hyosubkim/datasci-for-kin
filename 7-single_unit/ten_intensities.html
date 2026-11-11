@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -503,7 +503,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="effects-of-light-intensity-on-spike-rate">
+  <section class="tex2jax_ignore mathjax_ignore" id="effects-of-light-intensity-on-spike-rate">
 <h1>Effects of Light Intensity on Spike Rate<a class="headerlink" href="#effects-of-light-intensity-on-spike-rate" title="Link to this heading">#</a></h1>
 <p>Now we’re going to load an even larger data set. The <code class="docutils literal notranslate"><span class="pre">ten_intensities</span></code> data set expands on the optogenetic spike train data we worked with in the previous chapter. Now we have data recorded from a neuron as it was stimulated with ten different intensities of the light that activates its receptors (550 nm green). We have 10 trials’ worth of data at each intensity, so 100 trials in total. Each trial was 20 ms long, with optical stimulation starting at 4 ms and ending at 14 ms. Measuring the neuron’s response across a range of intensities allows us to map out the response “profile” of the neuron in terms of the number of spikes elicited by differing intensities.</p>
 <hr class="docutils" />
@@ -527,18 +527,6 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>
@@ -671,21 +659,141 @@
   </thead>
   <tbody>
     <tr>
-      <th>99</th>
+      <th>119</th>
+      <td>7</td>
+      <td>3</td>
       <td>6</td>
-      <td>8</td>
-      <td>20</td>
     </tr>
     <tr>
-      <th>110</th>
+      <th>105</th>
       <td>7</td>
-      <td>1</td>
+      <td>0</td>
       <td>14</td>
     </tr>
     <tr>
-      <th>141</th>
+      <th>93</th>
+      <td>6</td>
       <td>7</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>6</td>
+      <td>5</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>175</th>
       <td>8</td>
+      <td>6</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>7</td>
+      <td>2</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>7</td>
+      <td>3</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>7</td>
+      <td>5</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>187</th>
+      <td>8</td>
+      <td>8</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>9</td>
+      <td>0</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>6</td>
+      <td>0</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>9</td>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>5</td>
+      <td>7</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>7</td>
+      <td>2</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>6</td>
+      <td>2</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>8</td>
+      <td>3</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>226</th>
+      <td>9</td>
+      <td>9</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>7</td>
+      <td>2</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>9</td>
+      <td>8</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>6</td>
+      <td>7</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>183</th>
+      <td>8</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>205</th>
+      <td>9</td>
+      <td>2</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>4</td>
+      <td>0</td>
       <td>10</td>
     </tr>
     <tr>
@@ -695,130 +803,10 @@
       <td>17</td>
     </tr>
     <tr>
-      <th>169</th>
-      <td>8</td>
-      <td>4</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <th>164</th>
-      <td>8</td>
-      <td>3</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>72</th>
-      <td>6</td>
-      <td>1</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>162</th>
-      <td>8</td>
-      <td>3</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>4</td>
-      <td>2</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>4</td>
-      <td>6</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>216</th>
-      <td>9</td>
-      <td>6</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>188</th>
-      <td>8</td>
-      <td>9</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>189</th>
-      <td>8</td>
-      <td>9</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>8</td>
-      <td>0</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>161</th>
-      <td>8</td>
-      <td>3</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>4</td>
-      <td>1</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>62</th>
-      <td>5</td>
-      <td>8</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <th>118</th>
+      <th>139</th>
       <td>7</td>
-      <td>2</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <th>222</th>
-      <td>9</td>
-      <td>8</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>190</th>
-      <td>8</td>
-      <td>9</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>192</th>
-      <td>8</td>
-      <td>9</td>
+      <td>7</td>
       <td>14</td>
-    </tr>
-    <tr>
-      <th>175</th>
-      <td>8</td>
-      <td>6</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>88</th>
-      <td>6</td>
-      <td>6</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2</td>
-      <td>9</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>198</th>
-      <td>9</td>
-      <td>0</td>
-      <td>16</td>
     </tr>
   </tbody>
 </table>
@@ -912,7 +900,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e29f025fc7956e0d2b41abf566906b05d4fccc1c94f303415174da9cdb340e91.png" src="../_images/e29f025fc7956e0d2b41abf566906b05d4fccc1c94f303415174da9cdb340e91.png" />
+<img alt="../_images/8966b14d6a8408c938a30b401c10bf057b425776a55538e6d34db14673f7dacf.png" src="../_images/8966b14d6a8408c938a30b401c10bf057b425776a55538e6d34db14673f7dacf.png" />
 </div>
 </div>
 <p>We can see right away that there does seem to be a relationship between stimulation and spiking, since there are more ticks during the “on” (shaded) time than before it.</p>
@@ -934,7 +922,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d1055b03ca8d3525b2c721ea2f299e039856e20dbaf29b9c8e6852ea9bdb995f.png" src="../_images/d1055b03ca8d3525b2c721ea2f299e039856e20dbaf29b9c8e6852ea9bdb995f.png" />
+<img alt="../_images/b49eb4e2022b4435e59fdc4a43a22babde0fadeaa0eb44b2af5c8e62a9239cd5.png" src="../_images/b49eb4e2022b4435e59fdc4a43a22babde0fadeaa0eb44b2af5c8e62a9239cd5.png" />
 </div>
 </div>
 </section>
@@ -969,7 +957,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e2362a1148d855ed00ca8258547dc7acc80d0dd72d5c59f07fa776dc8beeff77.png" src="../_images/e2362a1148d855ed00ca8258547dc7acc80d0dd72d5c59f07fa776dc8beeff77.png" />
+<img alt="../_images/b426714d7d66f41e2dcf005e9759b660990aaca268c96f1c52c1c45b68fcca49.png" src="../_images/b426714d7d66f41e2dcf005e9759b660990aaca268c96f1c52c1c45b68fcca49.png" />
 </div>
 </div>
 </section>
@@ -1026,7 +1014,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/673caf0ca6abd96975afdbcdc9230e333cb924ce89dbf69386855552996dfaaf.png" src="../_images/673caf0ca6abd96975afdbcdc9230e333cb924ce89dbf69386855552996dfaaf.png" />
+<img alt="../_images/adec62ba2c2a46efb2dbd40e765b93dfeeeff6d5672152db37b3b938a2c57dc7.png" src="../_images/adec62ba2c2a46efb2dbd40e765b93dfeeeff6d5672152db37b3b938a2c57dc7.png" />
 </div>
 </div>
 </section>
@@ -1074,7 +1062,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e29691b4beb68bc0d2e4d1cdc498ade2257a3e7bbb94a31d3c9c9858218f1cd3.png" src="../_images/e29691b4beb68bc0d2e4d1cdc498ade2257a3e7bbb94a31d3c9c9858218f1cd3.png" />
+<img alt="../_images/b15599f3eea306557399362a0637f1c3ff3cf9fce7318267d806a1d5d55bab1b.png" src="../_images/b15599f3eea306557399362a0637f1c3ff3cf9fce7318267d806a1d5d55bab1b.png" />
 </div>
 </div>
 </section>
@@ -1140,7 +1128,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f0409a6e2276a55544ac1ba36e9dfa4f4ad62ee365adbcad6d2d6006857a16c6.png" src="../_images/f0409a6e2276a55544ac1ba36e9dfa4f4ad62ee365adbcad6d2d6006857a16c6.png" />
+<img alt="../_images/4c91051cdc62ec841dad2574af6376c11d55675b14cc964e330848c7e56c94fa.png" src="../_images/4c91051cdc62ec841dad2574af6376c11d55675b14cc964e330848c7e56c94fa.png" />
 </div>
 </div>
 <p>Now the PSTHs more clearly show us that the low intensity levels elicited very few spikes, while the higher intensity levels elicited a lot more.</p>
@@ -1229,7 +1217,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/92d986ca373fd7c76a55dfdaed3d3db6c830b7bdcd036008383b7da090dd395f.png" src="../_images/92d986ca373fd7c76a55dfdaed3d3db6c830b7bdcd036008383b7da090dd395f.png" />
+<img alt="../_images/945d4ab2fe655a8c90627dd0a0ac56f57f0dd0f2bd49208e67a3ead1321a0d10.png" src="../_images/945d4ab2fe655a8c90627dd0a0ac56f57f0dd0f2bd49208e67a3ead1321a0d10.png" />
 </div>
 </div>
 </section>

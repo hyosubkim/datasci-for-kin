@@ -28,23 +28,32 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
+import glob
 import pandas as pd
 
-data_files = ['data/gapminder_gdp_africa.csv', 'data/gapminder_gdp_asia.csv']
+data_files = ___(___)
 
-for filename in data_files:
-    data = pd.read_csv(filename, index_col='country')
-    print(filename, data.min())
+df_list = []
+
+for ____ in ____:
+    df_list.___(pd.read_csv(f))
+    
+df = ___
+
+df.___(10)
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
-[31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m pandas [38;5;28;01mas[39;00m pd
-[32m      2[39m 
-[32m      3[39m data_files = [[33m'data/gapminder_gdp_africa.csv'[39m, [33m'data/gapminder_gdp_asia.csv'[39m]
-[32m      4[39m 
+[31mTypeError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[11][39m[32m, line 4[39m
+[32m      1[39m [38;5;28;01mimport[39;00m glob
+[32m      2[39m [38;5;28;01mimport[39;00m pandas [38;5;28;01mas[39;00m pd
+[32m      3[39m 
+[32m----> [39m[32m4[39m data_files = ___(___)
+[32m      5[39m 
+[32m      6[39m df_list = []
+[32m      7[39m 
 
-[31mModuleNotFoundError[39m: No module named 'pandas'
+[31mTypeError[39m: 'list' object is not callable
 

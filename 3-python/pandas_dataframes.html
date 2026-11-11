@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -525,7 +525,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="introduction-to-pandas-dataframes">
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-pandas-dataframes">
 <h1>Introduction to pandas DataFrames<a class="headerlink" href="#introduction-to-pandas-dataframes" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <section id="questions">
@@ -581,16 +581,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>
@@ -1434,6 +1424,22 @@
   </thead>
   <tbody>
     <tr>
+      <th>26</th>
+      <td>Sweden</td>
+      <td>8527.844662</td>
+      <td>9911.878226</td>
+      <td>12329.441920</td>
+      <td>15258.296970</td>
+      <td>17832.024640</td>
+      <td>18855.725210</td>
+      <td>20667.381250</td>
+      <td>23586.929270</td>
+      <td>23880.016830</td>
+      <td>25266.594990</td>
+      <td>29341.630930</td>
+      <td>33859.748350</td>
+    </tr>
+    <tr>
       <th>16</th>
       <td>Montenegro</td>
       <td>2647.585601</td>
@@ -1448,6 +1454,54 @@
       <td>6465.613349</td>
       <td>6557.194282</td>
       <td>9253.896111</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Turkey</td>
+      <td>1969.100980</td>
+      <td>2218.754257</td>
+      <td>2322.869908</td>
+      <td>2826.356387</td>
+      <td>3450.696380</td>
+      <td>4269.122326</td>
+      <td>4241.356344</td>
+      <td>5089.043686</td>
+      <td>5678.348271</td>
+      <td>6601.429915</td>
+      <td>6508.085718</td>
+      <td>8458.276384</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Netherlands</td>
+      <td>8941.571858</td>
+      <td>11276.193440</td>
+      <td>12790.849560</td>
+      <td>15363.251360</td>
+      <td>18794.745670</td>
+      <td>21209.059200</td>
+      <td>21399.460460</td>
+      <td>23651.323610</td>
+      <td>26790.949610</td>
+      <td>30246.130630</td>
+      <td>33724.757780</td>
+      <td>36797.933320</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Belgium</td>
+      <td>8343.105127</td>
+      <td>9714.960623</td>
+      <td>10991.206760</td>
+      <td>13149.041190</td>
+      <td>16672.143560</td>
+      <td>19117.974480</td>
+      <td>20979.845890</td>
+      <td>22525.563080</td>
+      <td>25575.570690</td>
+      <td>27561.196630</td>
+      <td>30485.883750</td>
+      <td>33692.605080</td>
     </tr>
     <tr>
       <th>22</th>
@@ -1466,132 +1520,68 @@
       <td>9786.534714</td>
     </tr>
     <tr>
-      <th>10</th>
-      <td>Germany</td>
-      <td>7144.114393</td>
-      <td>10187.826650</td>
-      <td>12902.462910</td>
-      <td>14745.625610</td>
-      <td>18016.180270</td>
-      <td>20512.921230</td>
-      <td>22031.532740</td>
-      <td>24639.185660</td>
-      <td>26505.303170</td>
-      <td>27788.884160</td>
-      <td>30035.801980</td>
-      <td>32170.374420</td>
+      <th>15</th>
+      <td>Italy</td>
+      <td>4931.404155</td>
+      <td>6248.656232</td>
+      <td>8243.582340</td>
+      <td>10022.401310</td>
+      <td>12269.273780</td>
+      <td>14255.984750</td>
+      <td>16537.483500</td>
+      <td>19207.234820</td>
+      <td>22013.644860</td>
+      <td>24675.024460</td>
+      <td>27968.098170</td>
+      <td>28569.719700</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>Iceland</td>
-      <td>7267.688428</td>
-      <td>9244.001412</td>
-      <td>10350.159060</td>
-      <td>13319.895680</td>
-      <td>15798.063620</td>
-      <td>19654.962470</td>
-      <td>23269.607500</td>
-      <td>26923.206280</td>
-      <td>25144.392010</td>
-      <td>28061.099660</td>
-      <td>31163.201960</td>
-      <td>36180.789190</td>
+      <th>6</th>
+      <td>Czech Republic</td>
+      <td>6876.140250</td>
+      <td>8256.343918</td>
+      <td>10136.867130</td>
+      <td>11399.444890</td>
+      <td>13108.453600</td>
+      <td>14800.160620</td>
+      <td>15377.228550</td>
+      <td>16310.443400</td>
+      <td>14297.021220</td>
+      <td>16048.514240</td>
+      <td>17596.210220</td>
+      <td>22833.308510</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>Bosnia and Herzegovina</td>
-      <td>973.533195</td>
-      <td>1353.989176</td>
-      <td>1709.683679</td>
-      <td>2172.352423</td>
-      <td>2860.169750</td>
-      <td>3528.481305</td>
-      <td>4126.613157</td>
-      <td>4314.114757</td>
-      <td>2546.781445</td>
-      <td>4766.355904</td>
-      <td>6018.975239</td>
-      <td>7446.298803</td>
+      <th>12</th>
+      <td>Hungary</td>
+      <td>5263.673816</td>
+      <td>6040.180011</td>
+      <td>7550.359877</td>
+      <td>9326.644670</td>
+      <td>10168.656110</td>
+      <td>11674.837370</td>
+      <td>12545.990660</td>
+      <td>12986.479980</td>
+      <td>10535.628550</td>
+      <td>11712.776800</td>
+      <td>14843.935560</td>
+      <td>18008.944440</td>
     </tr>
     <tr>
-      <th>25</th>
-      <td>Spain</td>
-      <td>3834.034742</td>
-      <td>4564.802410</td>
-      <td>5693.843879</td>
-      <td>7993.512294</td>
-      <td>10638.751310</td>
-      <td>13236.921170</td>
-      <td>13926.169970</td>
-      <td>15764.983130</td>
-      <td>18603.064520</td>
-      <td>20445.298960</td>
-      <td>24835.471660</td>
-      <td>28821.063700</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Poland</td>
-      <td>4029.329699</td>
-      <td>4734.253019</td>
-      <td>5338.752143</td>
-      <td>6557.152776</td>
-      <td>8006.506993</td>
-      <td>9508.141454</td>
-      <td>8451.531004</td>
-      <td>9082.351172</td>
-      <td>7738.881247</td>
-      <td>10159.583680</td>
-      <td>12002.239080</td>
-      <td>15389.924680</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Norway</td>
-      <td>10095.421720</td>
-      <td>11653.973040</td>
-      <td>13450.401510</td>
-      <td>16361.876470</td>
-      <td>18965.055510</td>
-      <td>23311.349390</td>
-      <td>26298.635310</td>
-      <td>31540.974800</td>
-      <td>33965.661150</td>
-      <td>41283.164330</td>
-      <td>44683.975250</td>
-      <td>49357.190170</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>Switzerland</td>
-      <td>14734.232750</td>
-      <td>17909.489730</td>
-      <td>20431.092700</td>
-      <td>22966.144320</td>
-      <td>27195.113040</td>
-      <td>26982.290520</td>
-      <td>28397.715120</td>
-      <td>30281.704590</td>
-      <td>31871.530300</td>
-      <td>32135.323010</td>
-      <td>34480.957710</td>
-      <td>37506.419070</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Croatia</td>
-      <td>3119.236520</td>
-      <td>4338.231617</td>
-      <td>5477.890018</td>
-      <td>6960.297861</td>
-      <td>9164.090127</td>
-      <td>11305.385170</td>
-      <td>13221.821840</td>
-      <td>13822.583940</td>
-      <td>8447.794873</td>
-      <td>9875.604515</td>
-      <td>11628.388950</td>
-      <td>14619.222720</td>
+      <th>23</th>
+      <td>Slovak Republic</td>
+      <td>5074.659104</td>
+      <td>6093.262980</td>
+      <td>7481.107598</td>
+      <td>8412.902397</td>
+      <td>9674.167626</td>
+      <td>10922.664040</td>
+      <td>11348.545850</td>
+      <td>12037.267580</td>
+      <td>9498.467723</td>
+      <td>12126.230650</td>
+      <td>13638.778370</td>
+      <td>18678.314350</td>
     </tr>
   </tbody>
 </table>
@@ -1881,7 +1871,7 @@ Name: gdpPercap_1992, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8842.59803
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(8842.59803)
 </pre></div>
 </div>
 </div>
@@ -1917,7 +1907,7 @@ Name: gdpPercap_1992, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6137.076492
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(6137.076492)
 </pre></div>
 </div>
 </div>
@@ -2031,6 +2021,63 @@ Name: Albania, dtype: float64
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gdpPercap_1972</th>
+      <th>gdpPercap_1977</th>
+      <th>gdpPercap_1982</th>
+      <th>gdpPercap_1987</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Belgium</th>
+      <td>16672.143560</td>
+      <td>19117.974480</td>
+      <td>20979.845890</td>
+      <td>22525.563080</td>
+    </tr>
+    <tr>
+      <th>Bosnia and Herzegovina</th>
+      <td>2860.169750</td>
+      <td>3528.481305</td>
+      <td>4126.613157</td>
+      <td>4314.114757</td>
+    </tr>
+    <tr>
+      <th>Bulgaria</th>
+      <td>6597.494398</td>
+      <td>7612.240438</td>
+      <td>8224.191647</td>
+      <td>8239.854824</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>The code below will print from the sixth to second-last row of the DataFrame, and from the ninth to the last column:</p>
 <div class="cell docutils container">
@@ -2357,6 +2404,58 @@ Name: Albania, dtype: float64
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gdpPercap_1992</th>
+      <th>gdpPercap_2002</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Denmark</th>
+      <td>26406.73985</td>
+      <td>32166.50006</td>
+    </tr>
+    <tr>
+      <th>Finland</th>
+      <td>20647.16499</td>
+      <td>28204.59057</td>
+    </tr>
+    <tr>
+      <th>Norway</th>
+      <td>33965.66115</td>
+      <td>44683.97525</td>
+    </tr>
+    <tr>
+      <th>Sweden</th>
+      <td>23880.01683</td>
+      <td>29341.63093</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>We can equivalently write the command over several lines to make it a bit easier to read:</p>
 <div class="cell docutils container">
@@ -2367,6 +2466,58 @@ Name: Albania, dtype: float64
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gdpPercap_1992</th>
+      <th>gdpPercap_2002</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Denmark</th>
+      <td>26406.73985</td>
+      <td>32166.50006</td>
+    </tr>
+    <tr>
+      <th>Finland</th>
+      <td>20647.16499</td>
+      <td>28204.59057</td>
+    </tr>
+    <tr>
+      <th>Norway</th>
+      <td>33965.66115</td>
+      <td>44683.97525</td>
+    </tr>
+    <tr>
+      <th>Sweden</th>
+      <td>23880.01683</td>
+      <td>29341.63093</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>We could also define those lists as variables, and pass the variables to <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code>. This might be useful if you were going to use the lists more than once, as well as for clarity:</p>
 <div class="cell docutils container">
@@ -2454,7 +2605,7 @@ Name: Albania, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16245.20900641667
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(16245.20900641667)
 </pre></div>
 </div>
 </div>
@@ -2467,7 +2618,7 @@ Name: Albania, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>26982.29052
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(26982.29052)
 </pre></div>
 </div>
 </div>
@@ -3110,7 +3261,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7fca8e705030&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.groupby.generic.DataFrameGroupBy
 </pre></div>
 </div>
 </div>
@@ -3376,7 +3527,7 @@ dtype: float64
 </section>
 </section>
 <hr class="docutils" />
-<section id="exercises">
+<section class="tex2jax_ignore mathjax_ignore" id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
 <section id="selecting-individual-values">
 <h2>Selecting Individual Values<a class="headerlink" href="#selecting-individual-values" title="Link to this heading">#</a></h2>
@@ -3518,7 +3669,7 @@ row labels in the dataframe.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="summary-of-key-points">
+<section class="tex2jax_ignore mathjax_ignore" id="summary-of-key-points">
 <h1>Summary of Key Points:<a class="headerlink" href="#summary-of-key-points" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>pandas DataFrames are a powerful way of storing and working with tabular (row/column) data</p></li>

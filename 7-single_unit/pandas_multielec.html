@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -508,7 +508,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="working-with-multielectrode-data-in-pandas">
+  <section class="tex2jax_ignore mathjax_ignore" id="working-with-multielectrode-data-in-pandas">
 <h1>Working with Multielectrode Data in pandas<a class="headerlink" href="#working-with-multielectrode-data-in-pandas" title="Link to this heading">#</a></h1>
 <p>If you haven’t already, please read the <a class="reference internal" href="intro_multielec_data.html"><span class="doc std std-doc">description</span></a> of the experiment that this data comes from, in the previous section.</p>
 <p>We’re going to load in the multielectrode array data from a CSV file, do some EDA, and make some inferences with respect to our experimental questions.</p>
@@ -519,18 +519,6 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>
@@ -681,7 +669,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of electrodes (channels): 20
-Channel labels: [4.0, 7.0, 10.0, 22.0, 23.0, 32.0, 35.0, 42.0, 44.0, 45.0, 63.0, 67.0, 73.0, 75.0, 79.0, 80.0, 86.0, 91.0, 95.0, 96.0]
+Channel labels: [np.float64(4.0), np.float64(7.0), np.float64(10.0), np.float64(22.0), np.float64(23.0), np.float64(32.0), np.float64(35.0), np.float64(42.0), np.float64(44.0), np.float64(45.0), np.float64(63.0), np.float64(67.0), np.float64(73.0), np.float64(75.0), np.float64(79.0), np.float64(80.0), np.float64(86.0), np.float64(91.0), np.float64(95.0), np.float64(96.0)]
 </pre></div>
 </div>
 </div>
@@ -701,7 +689,7 @@ Channel labels: [4.0, 7.0, 10.0, 22.0, 23.0, 32.0, 35.0, 42.0, 44.0, 45.0, 63.0,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 2 orientations, which are: [0.0, 90.0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 2 orientations, which are: [np.float64(0.0), np.float64(90.0)]
 </pre></div>
 </div>
 </div>
@@ -757,7 +745,7 @@ Channel labels: [4.0, 7.0, 10.0, 22.0, 23.0, 32.0, 35.0, 42.0, 44.0, 45.0, 63.0,
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a2807a7f2a84c8ef48cf836fca7c8d4cf424c344ed0e3a757442a1ff0dbe1498.png" src="../_images/a2807a7f2a84c8ef48cf836fca7c8d4cf424c344ed0e3a757442a1ff0dbe1498.png" />
+<img alt="../_images/6118d39af4d4d0df07cc3ca153cc52eb1b4b486566ddf4312925d564d84261f8.png" src="../_images/6118d39af4d4d0df07cc3ca153cc52eb1b4b486566ddf4312925d564d84261f8.png" />
 </div>
 </div>
 </section>
@@ -780,7 +768,7 @@ Channel labels: [4.0, 7.0, 10.0, 22.0, 23.0, 32.0, 35.0, 42.0, 44.0, 45.0, 63.0,
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/68f69fc957bf077bddb7bbbca2e9f13636dff866e726706f15796a94a18a866e.png" src="../_images/68f69fc957bf077bddb7bbbca2e9f13636dff866e726706f15796a94a18a866e.png" />
+<img alt="../_images/0b0f8b6bc59678ae388c364247e8e8cd199c2ce7b8c680803472463350bec2ca.png" src="../_images/0b0f8b6bc59678ae388c364247e8e8cd199c2ce7b8c680803472463350bec2ca.png" />
 </div>
 </div>
 </section>
@@ -1594,7 +1582,7 @@ Channel labels: [4.0, 7.0, 10.0, 22.0, 23.0, 32.0, 35.0, 42.0, 44.0, 45.0, 63.0,
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/131c94dd8c8694e7a50cc394305c01cc89d87a0989dd5af5d501692e3173460a.png" src="../_images/131c94dd8c8694e7a50cc394305c01cc89d87a0989dd5af5d501692e3173460a.png" />
+<img alt="../_images/b3ef52d58ed1487e01a2130f39b285ae7ee2c51dd6c2758789aa2e0c566086d1.png" src="../_images/b3ef52d58ed1487e01a2130f39b285ae7ee2c51dd6c2758789aa2e0c566086d1.png" />
 </div>
 </div>
 <p>Note above the differences in total spike counts (<em>y</em> axis ranges) between sort codes. This is because the data are summed over channels; every channel as at least a sort code of 1 (i.e., contains data from one neuron/unit), but fewer channels were found to contain data from two or more units. So decreasing amounts of data contribute to the averages for sort codes 1-4.</p>

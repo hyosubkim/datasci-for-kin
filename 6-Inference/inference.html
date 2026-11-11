@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,6 +60,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '6-Inference/inference';</script>
     <link rel="icon" href="../_static/NESC3505_icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -500,7 +502,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="statistical-inference">
+  <section class="tex2jax_ignore mathjax_ignore" id="statistical-inference">
 <h1>Statistical inference<a class="headerlink" href="#statistical-inference" title="Link to this heading">#</a></h1>
 <p><em>This chapter has been adapted from <a class="reference external" href="https://python.datasciencebook.ca/inference.html">Data Science: A First Introduction (Python Edition)</a>, by Trevor Campbell, Tiffany Timbers, Melissa Lee, Lindsey Heagy, and Joel Ostblom of UBC.</em></p>
 <section id="overview">
@@ -610,22 +612,6 @@ night.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 
 <span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Start off with standard imports</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>
@@ -886,7 +872,7 @@ of size 40 from our population of listings and calculate the proportion of
 entire home/apartment listings in each sample. This simulation will create
 many sample proportions, which we can visualize using a histogram. The
 distribution of the estimate for all possible samples of a given size (which we
-commonly refer to as $n$) from a population is called
+commonly refer to as <span class="math notranslate nohighlight">\(n\)</span>) from a population is called
 a <strong>sampling distribution</strong>. The sampling distribution will help us see how much we would
 expect our sample proportions from this population to vary for samples of size 40.</p>
 <p>We again use the <code class="docutils literal notranslate"><span class="pre">sample</span></code> to take samples of size 40 from our
@@ -1360,7 +1346,7 @@ sampling distribution directly for learning purposes.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7b958531b2c4b982c740f6609e9acd675e717cd73a2c7cf79fbe4570df01a2a3.png" src="../_images/7b958531b2c4b982c740f6609e9acd675e717cd73a2c7cf79fbe4570df01a2a3.png" />
+<img alt="../_images/68147a5f40e6822756716a313c67d2c726de938bdd95cf536eb5eded604d50b3.png" src="../_images/68147a5f40e6822756716a313c67d2c726de938bdd95cf536eb5eded604d50b3.png" />
 </div>
 </div>
 <p>The sampling distribution above appears
@@ -1376,7 +1362,7 @@ calculate the mean of the sample proportions.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.74848375
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.74848375)
 </pre></div>
 </div>
 </div>
@@ -1412,7 +1398,7 @@ We can visualize the population distribution of the price per night with a histo
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/84f17d99f8f18a3ceb979713c90c68a022deb4c59d678709935c0c12265e7425.png" src="../_images/84f17d99f8f18a3ceb979713c90c68a022deb4c59d678709935c0c12265e7425.png" />
+<img alt="../_images/d457a40c4fcdae22f6e5e612cb80a053df2985ff7da04612497762751859717d.png" src="../_images/d457a40c4fcdae22f6e5e612cb80a053df2985ff7da04612497762751859717d.png" />
 </div>
 </div>
 <p>In this figure, we see that the population distribution
@@ -1428,7 +1414,7 @@ the average price per night for all the Airbnb listings.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>154.5109773617762
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(154.5109773617762)
 </pre></div>
 </div>
 </div>
@@ -1462,7 +1448,7 @@ of our sample.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c5517c257c86055ddde380868f22f2e69b3428c27e8b69abc5f02a811d033729.png" src="../_images/c5517c257c86055ddde380868f22f2e69b3428c27e8b69abc5f02a811d033729.png" />
+<img alt="../_images/0b9d62674742419ec88786e6e7c8f76c38df4d9cf56fafe6ede2c739a657c180.png" src="../_images/0b9d62674742419ec88786e6e7c8f76c38df4d9cf56fafe6ede2c739a657c180.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1472,7 +1458,7 @@ of our sample.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>153.48225
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(153.48225)
 </pre></div>
 </div>
 </div>
@@ -1601,7 +1587,7 @@ distribution of sample means for samples of size 40.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a2f767d74af098bbb1a3378a29ba2e53df8fcf1bea1af987b1528c3571b10482.png" src="../_images/a2f767d74af098bbb1a3378a29ba2e53df8fcf1bea1af987b1528c3571b10482.png" />
+<img alt="../_images/d34fdbf74d985326a432398811032aae4944a5fdfafec46ed9f5e2e7ee902a16.png" src="../_images/d34fdbf74d985326a432398811032aae4944a5fdfafec46ed9f5e2e7ee902a16.png" />
 </div>
 </div>
 <p>In the figure above, the sampling distribution of the mean
@@ -1653,7 +1639,7 @@ sample, which will keep the average from being too extreme.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b27d1002f3a60ae4bcb58c8251f6f849a149e77ad3e10b009f76305190de1cc2.png" src="../_images/b27d1002f3a60ae4bcb58c8251f6f849a149e77ad3e10b009f76305190de1cc2.png" />
+<img alt="../_images/b8f8184305ac5547925b4b12b121e9b1f27981b98205cfbb45c50deec788e037.png" src="../_images/b8f8184305ac5547925b4b12b121e9b1f27981b98205cfbb45c50deec788e037.png" />
 </div>
 </div>
 <p>Given that there is quite a bit of variation in the sampling distribution of
@@ -1714,7 +1700,7 @@ distribution with a orange vertical line.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0bba2d85094069ffdc492b5ef46c048489264fe4f2785a7fe7b15199f516bfd8.png" src="../_images/0bba2d85094069ffdc492b5ef46c048489264fe4f2785a7fe7b15199f516bfd8.png" />
+<img alt="../_images/bc668bec2b02e6eff6980602a6b6a977ecd440ee5cf6505b34cedc2b8cd32e3f.png" src="../_images/bc668bec2b02e6eff6980602a6b6a977ecd440ee5cf6505b34cedc2b8cd32e3f.png" />
 </div>
 </div>
 <p>Based on the visualization above, three points
@@ -1811,7 +1797,7 @@ large enough sample.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5d37f2a44d78568e625b262cafcdd38b4aab28e40441546736b8e8d2d031147f.png" src="../_images/5d37f2a44d78568e625b262cafcdd38b4aab28e40441546736b8e8d2d031147f.png" />
+<img alt="../_images/6b6285f4701766f04f713691d5ff846b637a182408e898584d30728720ac269e.png" src="../_images/6b6285f4701766f04f713691d5ff846b637a182408e898584d30728720ac269e.png" />
 </div>
 </div>
 <p>In the previous section, we took many samples of the same size <em>from our
@@ -1828,13 +1814,13 @@ Otherwise, if we had a sample of size $n$, and obtained a sample from it of
     size $n$ <i>without</i> replacement, it would just return our original sample!
 </div><p>This section will explore how to create a bootstrap distribution from a single
 sample using Python.  The process is visualized in the flow chart below.
-For a sample of size $n$, you would do the following:</p>
+For a sample of size <span class="math notranslate nohighlight">\(n\)</span>, you would do the following:</p>
 <ol class="arabic simple">
 <li><p>Randomly select an observation from the original sample (e.g., 9 Airbnb listings, 15 individuals post-stroke, 20 healthy young adults, etc.), which was drawn from the population (all Vancouver Airbnb listings, all Canadian adults post-stroke, all healthy, neurotypical adults between the ages of 18-35 across the globe, etc.).</p></li>
 <li><p>Record the observation’s value.</p></li>
 <li><p>Replace that observation.</p></li>
-<li><p>Repeat steps 1–3 (sampling <em>with</em> replacement) until you have $n$ observations, which form a bootstrap sample.</p></li>
-<li><p>Calculate the bootstrap point estimate (e.g., mean, median, proportion, slope, etc.) of the $n$ observations in your bootstrap sample.</p></li>
+<li><p>Repeat steps 1–3 (sampling <em>with</em> replacement) until you have <span class="math notranslate nohighlight">\(n\)</span> observations, which form a bootstrap sample.</p></li>
+<li><p>Calculate the bootstrap point estimate (e.g., mean, median, proportion, slope, etc.) of the <span class="math notranslate nohighlight">\(n\)</span> observations in your bootstrap sample.</p></li>
 <li><p>Repeat steps 1–5 many times to create a distribution of point estimates (the bootstrap distribution).</p></li>
 <li><p>Calculate the plausible range of values around our observed point estimate.</p></li>
 </ol>
@@ -2338,7 +2324,7 @@ histogram of prices in the sample is displayed in the figure below.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c5517c257c86055ddde380868f22f2e69b3428c27e8b69abc5f02a811d033729.png" src="../_images/c5517c257c86055ddde380868f22f2e69b3428c27e8b69abc5f02a811d033729.png" />
+<img alt="../_images/0b9d62674742419ec88786e6e7c8f76c38df4d9cf56fafe6ede2c739a657c180.png" src="../_images/0b9d62674742419ec88786e6e7c8f76c38df4d9cf56fafe6ede2c739a657c180.png" />
 </div>
 </div>
 <p>The histogram for the sample is skewed, with a few observations out to the right. The
@@ -2364,7 +2350,7 @@ we change the <code class="docutils literal notranslate"><span class="pre">repla
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c3f62133657de8090e48cfdb38c938457efc9c239e445b3ebaa08f7952713cc2.png" src="../_images/c3f62133657de8090e48cfdb38c938457efc9c239e445b3ebaa08f7952713cc2.png" />
+<img alt="../_images/d8d586565dd9488e70b23ad87f1e58f330ce982810bf73eaaef86b2b2c1967fc.png" src="../_images/d8d586565dd9488e70b23ad87f1e58f330ce982810bf73eaaef86b2b2c1967fc.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2374,7 +2360,7 @@ we change the <code class="docutils literal notranslate"><span class="pre">repla
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>132.65
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(132.65)
 </pre></div>
 </div>
 </div>
@@ -2598,7 +2584,7 @@ so that it is easier to read.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c4a7b3791940b40373d7eeb26ee89b21ca46361f77943ecbd2ffccbdbf5433bc.png" src="../_images/c4a7b3791940b40373d7eeb26ee89b21ca46361f77943ecbd2ffccbdbf5433bc.png" />
+<img alt="../_images/e6fa5587c2e37ab489c3d048680dfbb5e2fcacb6a279f23e4adf8303b5111dad.png" src="../_images/e6fa5587c2e37ab489c3d048680dfbb5e2fcacb6a279f23e4adf8303b5111dad.png" />
 </div>
 </div>
 <p>We can see how the distributions of the
@@ -2797,7 +2783,7 @@ our point estimate to behave if we take multiple samples.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c7bfa36d2ed0dbbff1d53d0621b9bcea2162993cb2343ae3584b6aac9f4b11b3.png" src="../_images/c7bfa36d2ed0dbbff1d53d0621b9bcea2162993cb2343ae3584b6aac9f4b11b3.png" />
+<img alt="../_images/5f044b1618a912b095ab001a7149f53794de6398c1a0ddebf4f40da55e121e39.png" src="../_images/5f044b1618a912b095ab001a7149f53794de6398c1a0ddebf4f40da55e121e39.png" />
 </div>
 </div>
 <p>Let’s compare the bootstrap distribution—which we construct by taking many samples from our original sample of size 40—with
@@ -2850,7 +2836,7 @@ the true sampling distribution—which corresponds to taking many samples from t
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/482d0d6389b38e502a6e7ab22b796c30f463493a9f5b977bfe1784fcabf8c866.png" src="../_images/482d0d6389b38e502a6e7ab22b796c30f463493a9f5b977bfe1784fcabf8c866.png" />
+<img alt="../_images/54c90cc103deec2db24949c1b1e3723cc1e8523be4ce9492582cae386ef0a849.png" src="../_images/54c90cc103deec2db24949c1b1e3723cc1e8523be4ce9492582cae386ef0a849.png" />
 </div>
 </div>
 <p>There are two essential points that we can take away from
@@ -2934,17 +2920,17 @@ visualize the interval on our distribution in the following figure.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/045404041e9cc69a0180604212a0c2e86642197d1607bb41fbd142311020a0c4.png" src="../_images/045404041e9cc69a0180604212a0c2e86642197d1607bb41fbd142311020a0c4.png" />
+<img alt="../_images/ec482d1caf890ebe01c87f6741f058361d80ba251983f6d33ada7327e9ba51cd.png" src="../_images/ec482d1caf890ebe01c87f6741f058361d80ba251983f6d33ada7327e9ba51cd.png" />
 </div>
 </div>
 <p>To finish our estimation of the population parameter, we would report the point
 estimate and our confidence interval’s lower and upper bounds. Here the sample
 mean price-per-night of 40 Airbnb listings was
-\$153.48, and we are 95% “confident” that the true
+\<span class="math notranslate nohighlight">\(153.48, and we are 95% &quot;confident&quot; that the true
 population mean price-per-night for all Airbnb listings in Vancouver is between
-$(121.6, 191.5).
+\$(121.6, 191.5).
 Notice that our interval does indeed contain the true
-population mean value, \$154.51! However, in
+population mean value, \\\)</span>154.51! However, in
 practice, we would not know whether our interval captured the population
 parameter or not because we usually only have a single sample, not the entire
 population. This is the best we can do when we only have one sample!</p>

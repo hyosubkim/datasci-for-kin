@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -509,7 +509,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="looping-over-data-files">
+  <section class="tex2jax_ignore mathjax_ignore" id="looping-over-data-files">
 <h1>Looping Over Data Files<a class="headerlink" href="#looping-over-data-files" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <section id="questions">
@@ -546,15 +546,32 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data_files</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data/gapminder_gdp_africa.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;data/gapminder_gdp_asia.csv&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data/gapminder_gdp_africa.csv gdpPercap_1952    298.846212
+gdpPercap_1957    335.997115
+gdpPercap_1962    355.203227
+gdpPercap_1967    412.977514
+gdpPercap_1972    464.099504
+gdpPercap_1977    502.319733
+gdpPercap_1982    462.211415
+gdpPercap_1987    389.876185
+gdpPercap_1992    410.896824
+gdpPercap_1997    312.188423
+gdpPercap_2002    241.165876
+gdpPercap_2007    277.551859
+dtype: float64
+data/gapminder_gdp_asia.csv gdpPercap_1952    331.0
+gdpPercap_1957    350.0
+gdpPercap_1962    388.0
+gdpPercap_1967    349.0
+gdpPercap_1972    357.0
+gdpPercap_1977    371.0
+gdpPercap_1982    424.0
+gdpPercap_1987    385.0
+gdpPercap_1992    347.0
+gdpPercap_1997    415.0
+gdpPercap_2002    611.0
+gdpPercap_2007    944.0
+dtype: float64
 </pre></div>
 </div>
 </div>
@@ -584,7 +601,7 @@ whose names end with <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>all csv files in data directory: [&#39;data/gapminder_gdp_americas.csv&#39;, &#39;data/gapminder_gdp_europe.csv&#39;, &#39;data/gapminder_all.csv&#39;, &#39;data/gapminder_gdp_oceania.csv&#39;, &#39;data/gapminder_gdp_africa.csv&#39;, &#39;data/gapminder_gdp_asia.csv&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>all csv files in data directory: [&#39;data/gapminder_gdp_americas.csv&#39;, &#39;data/gapminder_gdp_europe.csv&#39;, &#39;data/gapminder_all.csv&#39;, &#39;data/gapminder_gdp_oceania.csv&#39;, &#39;data/gapminder_gdp_africa.csv&#39;, &#39;data/s2.csv&#39;, &#39;data/s3.csv&#39;, &#39;data/s1.csv&#39;, &#39;data/gapminder_life_expectancy_years.csv&#39;, &#39;data/gapminder_gdp_asia.csv&#39;]
 </pre></div>
 </div>
 </div>
@@ -791,34 +808,16 @@ data/gapminder_gdp_asia.csv 331.0
   </thead>
   <tbody>
     <tr>
+      <th>9</th>
+      <td>s1</td>
+      <td>10</td>
+      <td>0.439583</td>
+    </tr>
+    <tr>
       <th>2</th>
       <td>s2</td>
       <td>3</td>
       <td>0.396831</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>s3</td>
-      <td>1</td>
-      <td>0.322099</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>s1</td>
-      <td>7</td>
-      <td>0.400544</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>s1</td>
-      <td>3</td>
-      <td>0.404175</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>s1</td>
-      <td>8</td>
-      <td>0.335198</td>
     </tr>
     <tr>
       <th>1</th>
@@ -827,16 +826,34 @@ data/gapminder_gdp_asia.csv 331.0
       <td>0.389858</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>s2</td>
-      <td>8</td>
-      <td>0.409580</td>
+      <th>9</th>
+      <td>s3</td>
+      <td>10</td>
+      <td>0.704491</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>8</th>
       <td>s1</td>
-      <td>6</td>
-      <td>0.368142</td>
+      <td>9</td>
+      <td>0.341722</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>s1</td>
+      <td>4</td>
+      <td>0.269520</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>s3</td>
+      <td>7</td>
+      <td>0.492787</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>s1</td>
+      <td>8</td>
+      <td>0.335198</td>
     </tr>
   </tbody>
 </table>
@@ -883,44 +900,44 @@ data/gapminder_gdp_asia.csv 331.0
   </thead>
   <tbody>
     <tr>
+      <th>s3</th>
+      <td>4</td>
+      <td>0.364524</td>
+    </tr>
+    <tr>
+      <th>s1</th>
+      <td>5</td>
+      <td>0.437765</td>
+    </tr>
+    <tr>
+      <th>s1</th>
+      <td>3</td>
+      <td>0.404175</td>
+    </tr>
+    <tr>
+      <th>s3</th>
+      <td>7</td>
+      <td>0.492787</td>
+    </tr>
+    <tr>
+      <th>s2</th>
+      <td>10</td>
+      <td>0.468912</td>
+    </tr>
+    <tr>
+      <th>s2</th>
+      <td>3</td>
+      <td>0.396831</td>
+    </tr>
+    <tr>
+      <th>s3</th>
+      <td>3</td>
+      <td>0.384297</td>
+    </tr>
+    <tr>
       <th>s2</th>
       <td>6</td>
       <td>0.659228</td>
-    </tr>
-    <tr>
-      <th>s3</th>
-      <td>5</td>
-      <td>0.454075</td>
-    </tr>
-    <tr>
-      <th>s3</th>
-      <td>1</td>
-      <td>0.322099</td>
-    </tr>
-    <tr>
-      <th>s1</th>
-      <td>6</td>
-      <td>0.368142</td>
-    </tr>
-    <tr>
-      <th>s2</th>
-      <td>4</td>
-      <td>0.417988</td>
-    </tr>
-    <tr>
-      <th>s2</th>
-      <td>5</td>
-      <td>0.371810</td>
-    </tr>
-    <tr>
-      <th>s3</th>
-      <td>10</td>
-      <td>0.704491</td>
-    </tr>
-    <tr>
-      <th>s1</th>
-      <td>1</td>
-      <td>0.508971</td>
     </tr>
   </tbody>
 </table>
@@ -929,7 +946,7 @@ data/gapminder_gdp_asia.csv 331.0
 </section>
 </section>
 <hr class="docutils" />
-<section id="exercises">
+<section class="tex2jax_ignore mathjax_ignore" id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
 <section id="determining-matches">
 <h2>Determining Matches<a class="headerlink" href="#determining-matches" title="Link to this heading">#</a></h2>
@@ -969,6 +986,22 @@ data/gapminder_gdp_asia.csv 331.0
 <span class="n">df</span> <span class="o">=</span> <span class="n">___</span>
 
 <span class="n">df</span><span class="o">.</span><span class="n">___</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">data_files</span> <span class="o">=</span> <span class="n">___</span><span class="p">(</span><span class="n">___</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">df_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> 
+
+<span class="ne">TypeError</span>: &#39;list&#39; object is not callable
 </pre></div>
 </div>
 </div>

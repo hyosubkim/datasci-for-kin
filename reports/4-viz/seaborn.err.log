@@ -28,20 +28,47 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import seaborn as sns
-import pandas as pd
-import matplotlib.pyplot as plt
-import glob
+df = pd.concat([pd.read_csv(f) for f in glob.glob('data/rl_s??_data.csv')],
+              ignore_index=True)
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
-[31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m seaborn [38;5;28;01mas[39;00m sns
-[32m      2[39m [38;5;28;01mimport[39;00m pandas [38;5;28;01mas[39;00m pd
-[32m      3[39m [38;5;28;01mimport[39;00m matplotlib.pyplot [38;5;28;01mas[39;00m plt
-[32m      4[39m [38;5;28;01mimport[39;00m glob
+[31mValueError[39m                                Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[5][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m df = pd.concat([pd.read_csv(f) for f in glob.glob('data/rl_s??_data.csv')],
+[32m      2[39m               ignore_index=[38;5;28;01mTrue[39;00m)
 
-[31mModuleNotFoundError[39m: No module named 'seaborn'
+[36mFile [39m[32m/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/pandas/core/reshape/concat.py:382[39m, in [36mconcat[39m[34m(objs, axis, join, ignore_index, keys, levels, names, verify_integrity, sort, copy)[39m
+[32m    379[39m [38;5;28;01melif[39;00m copy [38;5;129;01mand[39;00m using_copy_on_write():
+[32m    380[39m     copy = [38;5;28;01mFalse[39;00m
+[32m--> [39m[32m382[39m op = [30;43m_Concatenator[39;49m[30;43m([39;49m
+[32m    383[39m [30;43m    [39;49m[30;43mobjs[39;49m[30;43m,[39;49m
+[32m    384[39m [30;43m    [39;49m[30;43maxis[39;49m[30;43m=[39;49m[30;43maxis[39;49m[30;43m,[39;49m
+[32m    385[39m [30;43m    [39;49m[30;43mignore_index[39;49m[30;43m=[39;49m[30;43mignore_index[39;49m[30;43m,[39;49m
+[32m    386[39m [30;43m    [39;49m[30;43mjoin[39;49m[30;43m=[39;49m[30;43mjoin[39;49m[30;43m,[39;49m
+[32m    387[39m [30;43m    [39;49m[30;43mkeys[39;49m[30;43m=[39;49m[30;43mkeys[39;49m[30;43m,[39;49m
+[32m    388[39m [30;43m    [39;49m[30;43mlevels[39;49m[30;43m=[39;49m[30;43mlevels[39;49m[30;43m,[39;49m
+[32m    389[39m [30;43m    [39;49m[30;43mnames[39;49m[30;43m=[39;49m[30;43mnames[39;49m[30;43m,[39;49m
+[32m    390[39m [30;43m    [39;49m[30;43mverify_integrity[39;49m[30;43m=[39;49m[30;43mverify_integrity[39;49m[30;43m,[39;49m
+[32m    391[39m [30;43m    [39;49m[30;43mcopy[39;49m[30;43m=[39;49m[30;43mcopy[39;49m[30;43m,[39;49m
+[32m    392[39m [30;43m    [39;49m[30;43msort[39;49m[30;43m=[39;49m[30;43msort[39;49m[30;43m,[39;49m
+[32m    393[39m [30;43m[39;49m[30;43m)[39;49m
+[32m    395[39m [38;5;28;01mreturn[39;00m op.get_result()
+
+[36mFile [39m[32m/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/pandas/core/reshape/concat.py:445[39m, in [36m_Concatenator.__init__[39m[34m(self, objs, axis, join, keys, levels, names, ignore_index, verify_integrity, copy, sort)[39m
+[32m    442[39m [38;5;28mself[39m.verify_integrity = verify_integrity
+[32m    443[39m [38;5;28mself[39m.copy = copy
+[32m--> [39m[32m445[39m objs, keys = [30;43mself[39;49m[30;43m.[39;49m[30;43m_clean_keys_and_objs[39;49m[30;43m([39;49m[30;43mobjs[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mkeys[39;49m[30;43m)[39;49m
+[32m    447[39m [38;5;66;03m# figure out what our result ndim is going to be[39;00m
+[32m    448[39m ndims = [38;5;28mself[39m._get_ndims(objs)
+
+[36mFile [39m[32m/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/pandas/core/reshape/concat.py:507[39m, in [36m_Concatenator._clean_keys_and_objs[39m[34m(self, objs, keys)[39m
+[32m    504[39m     objs_list = [38;5;28mlist[39m(objs)
+[32m    506[39m [38;5;28;01mif[39;00m [38;5;28mlen[39m(objs_list) == [32m0[39m:
+[32m--> [39m[32m507[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m"[39m[33mNo objects to concatenate[39m[33m"[39m)
+[32m    509[39m [38;5;28;01mif[39;00m keys [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[32m    510[39m     objs_list = [38;5;28mlist[39m(com.not_none(*objs_list))
+
+[31mValueError[39m: No objects to concatenate
 
