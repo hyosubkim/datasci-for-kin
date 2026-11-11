@@ -514,7 +514,6 @@
                   
   <section id="working-with-repeated-measures-data">
 <h1>Working with Repeated Measures Data<a class="headerlink" href="#working-with-repeated-measures-data" title="Link to this heading">#</a></h1>
-<hr class="docutils" />
 <section id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -530,7 +529,7 @@
 <p>For this reason, when plotting nested data it is usually appropriate to first average within each individual (for each condition), and then compute and visualize measures of the true inter-individual variability. Seaborn does not do this by default, and so the plots we generated in the previous lesson were actually inappropriate for assessing whether there was a true experimental effect. In this lesson we’ll see how to use pandas <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> to use Seaborn appropriately with nested data.</p>
 <section id="about-the-data">
 <h3>About the data<a class="headerlink" href="#about-the-data" title="Link to this heading">#</a></h3>
-<p>First, let’s load in a new data set (<code class="docutils literal notranslate"><span class="pre">flanker_rt_data.csv</span></code>). This is real data from a flanker experiment (similar to that described in the section on <a class="reference internal" href="#../2/spreadsheets.html"><span class="xref myst">spreadsheets</span></a>).  In this experiment participants had to press either the left or right arrow key, to indicate whether an arrow shown on the screen is pointing left or right, respectively. However, the catch is that the centre arrow is “flanked” by two other arrows on each side; these can be pointing the same way as the target arrow (congruent):</p>
+<p>First, let’s load in a new data set (<code class="docutils literal notranslate"><span class="pre">flanker_rt_data.csv</span></code>). This is real data from a flanker experiment (similar to that described in the section on <a class="reference internal" href="../2-nds/spreadsheets.html"><span class="std std-doc">spreadsheets</span></a>).  In this experiment participants had to press either the left or right arrow key, to indicate whether an arrow shown on the screen is pointing left or right, respectively. However, the catch is that the centre arrow is “flanked” by two other arrows on each side; these can be pointing the same way as the target arrow (congruent):</p>
 <p><img alt="flanker_congruent" src="../_images/flanker_congruent%400.75x1.png" /></p>
 <p>or in the opposite direction (incongruent)</p>
 <p><img alt="flanker_incongruent" src="../_images/flanker_incongruent%400.75x1.png" /></p>
@@ -583,84 +582,84 @@
   </thead>
   <tbody>
     <tr>
-      <th>2597</th>
-      <td>s4</td>
-      <td>2</td>
-      <td>28</td>
-      <td>incongruent</td>
-      <td>0.453134</td>
+      <th>1237</th>
+      <td>s21</td>
+      <td>4</td>
+      <td>30</td>
+      <td>congruent</td>
+      <td>0.434852</td>
     </tr>
     <tr>
-      <th>2922</th>
-      <td>s6</td>
-      <td>3</td>
-      <td>2</td>
+      <th>2080</th>
+      <td>s9</td>
+      <td>1</td>
+      <td>21</td>
       <td>neutral</td>
-      <td>0.544545</td>
+      <td>0.377662</td>
     </tr>
     <tr>
-      <th>4125</th>
+      <th>431</th>
+      <td>s16</td>
+      <td>4</td>
+      <td>16</td>
+      <td>neutral</td>
+      <td>0.498238</td>
+    </tr>
+    <tr>
+      <th>1265</th>
+      <td>s21</td>
+      <td>5</td>
+      <td>26</td>
+      <td>incongruent</td>
+      <td>0.430054</td>
+    </tr>
+    <tr>
+      <th>834</th>
+      <td>s8</td>
+      <td>2</td>
+      <td>4</td>
+      <td>incongruent</td>
+      <td>0.412886</td>
+    </tr>
+    <tr>
+      <th>3778</th>
+      <td>s17</td>
+      <td>4</td>
+      <td>32</td>
+      <td>neutral</td>
+      <td>0.505081</td>
+    </tr>
+    <tr>
+      <th>4117</th>
       <td>s5</td>
       <td>5</td>
-      <td>29</td>
+      <td>21</td>
       <td>neutral</td>
-      <td>0.426094</td>
+      <td>0.402266</td>
     </tr>
     <tr>
-      <th>3870</th>
-      <td>s19</td>
-      <td>2</td>
-      <td>29</td>
-      <td>neutral</td>
-      <td>0.600802</td>
-    </tr>
-    <tr>
-      <th>1564</th>
+      <th>1474</th>
       <td>s1</td>
-      <td>5</td>
-      <td>8</td>
-      <td>neutral</td>
-      <td>0.485013</td>
-    </tr>
-    <tr>
-      <th>921</th>
-      <td>s8</td>
-      <td>4</td>
-      <td>27</td>
-      <td>congruent</td>
-      <td>0.421690</td>
-    </tr>
-    <tr>
-      <th>3444</th>
-      <td>s3</td>
-      <td>4</td>
-      <td>17</td>
-      <td>congruent</td>
-      <td>0.421145</td>
-    </tr>
-    <tr>
-      <th>854</th>
-      <td>s8</td>
       <td>2</td>
-      <td>24</td>
-      <td>neutral</td>
-      <td>0.644778</td>
-    </tr>
-    <tr>
-      <th>972</th>
-      <td>s24</td>
-      <td>1</td>
       <td>14</td>
-      <td>incongruent</td>
-      <td>0.692757</td>
+      <td>congruent</td>
+      <td>0.484669</td>
     </tr>
     <tr>
-      <th>3009</th>
-      <td>s6</td>
+      <th>2510</th>
+      <td>s14</td>
       <td>5</td>
-      <td>25</td>
+      <td>5</td>
+      <td>incongruent</td>
+      <td>0.372719</td>
+    </tr>
+    <tr>
+      <th>3288</th>
+      <td>s27</td>
+      <td>4</td>
+      <td>18</td>
       <td>neutral</td>
-      <td>0.452540</td>
+      <td>0.366296</td>
     </tr>
   </tbody>
 </table>
@@ -803,7 +802,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/14cb0eb7921252a2154df413ca938a58b7e09758fd61bd6fd50ea659455e81fc.png" src="../_images/14cb0eb7921252a2154df413ca938a58b7e09758fd61bd6fd50ea659455e81fc.png" />
+<img alt="../_images/ed76bff411e426e5aa7c3a2f33777f858843eca213830b3c9ffe0790c03cdd03.png" src="../_images/ed76bff411e426e5aa7c3a2f33777f858843eca213830b3c9ffe0790c03cdd03.png" />
 </div>
 </div>
 <p>This is really less informative than the above plots, because there are so many data points! Mostly we just see big patches of the plots for each condition with lots of individual values.</p>
@@ -814,7 +813,7 @@
 <p>Finally, let’s look at a point plot. Recall that point plots show the mean for each condition, along with 95% confidence intervals (CIs) as the measure of variance. CIs are much narrower than the whiskers in box plots, because they are meant to represent our confidence in the estimate of the mean, rather than showing the overall distribution of values. In general, we can interpret conditions with non-overlapping 95% CIs as being “believably different” from each other, and likely to be  (statistically) significantly different as well.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
            <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
            <span class="n">x</span><span class="o">=</span><span class="s1">&#39;flankers&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;flankers&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -822,14 +821,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/42/fy648srd41l966jbjlswhljc0000gr/T/ipykernel_55377/3023065820.py:1: UserWarning: 
-
-The `join` parameter is deprecated and will be removed in v0.15.0. You can remove the line between points with `linestyle=&#39;none&#39;`.
-
-  sns.catplot(kind=&#39;point&#39;, join=False,
-</pre></div>
-</div>
-<img alt="../_images/823462bc4113267d2e9b64057a9a5a52fbf146a7f2fd4a728f646c17dc4922e1.png" src="../_images/823462bc4113267d2e9b64057a9a5a52fbf146a7f2fd4a728f646c17dc4922e1.png" />
+<img alt="../_images/ca7a47ceaa8f1665de0f0c2c10e5a02d68958c17d464950858ed478531f930cb.png" src="../_images/ca7a47ceaa8f1665de0f0c2c10e5a02d68958c17d464950858ed478531f930cb.png" />
 </div>
 </div>
 <p>We can see that the CIs are quite far apart, suggesting that there are very large differences between RTs for each pair of conditions.</p>
@@ -1074,7 +1066,7 @@ The `join` parameter is deprecated and will be removed in v0.15.0. You can remov
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fe9df5fa331dcb6ed3c6ecd6049fc7f2aa4779c60df61000c7199cae209ac836.png" src="../_images/fe9df5fa331dcb6ed3c6ecd6049fc7f2aa4779c60df61000c7199cae209ac836.png" />
+<img alt="../_images/af6b31287ceb1bd0911673625d0e8a863335bb85821a7e54dc68c3c08d15a125.png" src="../_images/af6b31287ceb1bd0911673625d0e8a863335bb85821a7e54dc68c3c08d15a125.png" />
 </div>
 </div>
 <p>This is not a lot more useful than the strip plot above, because Seaborn draws dots for each participant over those of previous participants. So we see lots of pink in the plot above, because that is the colour used for the last participant plotted. This is addressed by using a swarm plot (which will take a long time to execute if you try to run this, due to the large number of data points it’s trying to plot):</p>
@@ -1152,15 +1144,17 @@ The `join` parameter is deprecated and will be removed in v0.15.0. You can remov
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fe90d7127f8ee95e44ba589ad6d33ec5f0eed9286097bc2e543fc961a726ee76.png" src="../_images/fe90d7127f8ee95e44ba589ad6d33ec5f0eed9286097bc2e543fc961a726ee76.png" />
+<img alt="../_images/b435b739602f551dea22ccc3ae30aa18fa813116b4910c693045501fa05a0aff.png" src="../_images/b435b739602f551dea22ccc3ae30aa18fa813116b4910c693045501fa05a0aff.png" />
 </div>
 </div>
 <p><strong>This is the most important figure in this lesson</strong>. Compared to the point plot with 95% CIs that we generated above for the aggregated data, the CIs in this plot are much larger than those we saw earlier, in the point plot for the un-aggregated data. In that previous plot, the width of the CIs was only about 0.005 s (5 ms). Here, with the CIs computed properly (as reflecting the variance across individuals), the width of the CIs is approximately 0.02 s (20 ms). While still small relative to the differences in the means, the CIs are nonetheless roughly 4x wider in the aggregated data.</p>
 <section id="why-do-cis-get-larger-when-we-properly-aggregate-repeated-measures-data">
 <h3>Why do CIs get larger when we properly aggregate repeated measures data?<a class="headerlink" href="#why-do-cis-get-larger-when-we-properly-aggregate-repeated-measures-data" title="Link to this heading">#</a></h3>
 <p>We’ve already seen that the variance in the data actually went down, as quantified by the min-max range of values, and the standard deviation. So it may seem strange that the CIs do the opposite, and get bigger. To understand this, consider how the 95% CIs are computed:</p>
-<p>$CI = 1.96 * \frac{std}{\sqrt n}$</p>
-<p>CIs are computed by dividing the standard deviation ($std$) by the square root of $n$ — the number of data points used to compute the mean and standard deviation. In the un-aggregated data, this was approximately 1000 – 2000 data points for each condition. In contrast, for the aggregated data, $n$ = 27. Thus the CIs are much wider, because dividing by a larger number (1000 - 2000, rather than 27) results in a smaller number (even factoring in the differences in standard deviation, and the square root calculation). The values are multiplied by 1.96 because this is the <em>z</em> value corresponding to <em>p</em> = .05 in a normal distribution.</p>
+<p>$$
+CI = 1.96 \times \frac{std}{\sqrt{n}}
+$$</p>
+<p>CIs are computed by dividing the standard deviation ($std$) by the square root of $n$ — the number of data points used to compute the mean and standard deviation. In the un-aggregated data, this was approximately 1000 – 2000 data points for each condition. In contrast, for the aggregated data, $n = 27$. Thus the CIs are much wider, because dividing by a larger number (1000 - 2000, rather than 27) results in a smaller number (even factoring in the differences in standard deviation, and the square root calculation). The values are multiplied by 1.96 because this is the <em>z</em> value corresponding to <em>p</em> = .05 in a normal distribution.</p>
 <p>Notably, the conclusions that we would draw from this final plot would be quite different if we had, in error, used the first point plot generated from the un-aggregated data. The first plot made it look like RTs in the three conditions were very different from each other, with little question as to the differences between them (due to the small and non-overlapping CIs). In contrast, when the data are properly aggregated as in the above plot, the CIs for neutral overlap a lot with both of the flanker conditions, which makes us less confident in their differences.</p>
 <p>Recall that the neutral condition was intended to help assess whether the congruent flankers showed facilitation relative to neutral, and whether incongruent flankers showed interference relative to neutral. The fact that the neutral condition overlaps with both others, but congruent and incongruent appear significantly different, suggests that the flanker effect (congruent faster than incongruent) may actually be due to a <em>combination</em> of facilitation and interference, rather than one or the other.</p>
 <p>The interpretation of the current data set is less important here than understanding the importance of recognizing and appropriately dealing with repeated-measures data. It is critical to understand the effects of repeated measures and nesting on estimate of variance — and of the differences between measures of variance in the data (as reflected by things like standard deviation, or box plots), and estimates of our confidence in the accuracy of the mean (CIs). CIs can be used for statistical inference (i.e., is there a believable difference?), whereas the variance reflected in box plots (and histograms, KDEs, etc.) is more informative at the early stages of exploring and understanding your data, and diagnosing potential issues in the data that might need to be addressed prior to inference about the true patters in the data. Although this initial example used relatively “clean” data — and we didn’t worry about doing anything to address the skew of the distributions or the outliers — in future lessons we will see cases where this first step can be critically important.</p>
@@ -1405,7 +1399,7 @@ The `join` parameter is deprecated and will be removed in v0.15.0. You can remov
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/788cd2cb8f8dbd34a44c8f04553004ee8f735d27f9878a431aafd7b8391d14d2.png" src="../_images/788cd2cb8f8dbd34a44c8f04553004ee8f735d27f9878a431aafd7b8391d14d2.png" />
+<img alt="../_images/cf7bae37bdc5f9b672509502705b2de5d34a46f3bfe8ee66ba9c84a74502655d.png" src="../_images/cf7bae37bdc5f9b672509502705b2de5d34a46f3bfe8ee66ba9c84a74502655d.png" />
 </div>
 </div>
 </section>
@@ -1438,7 +1432,7 @@ The `join` parameter is deprecated and will be removed in v0.15.0. You can remov
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/200d956ab08f9cfd691a56c25a508c8de618a1e5e23c4ef9b558aba5ef719eb9.png" src="../_images/200d956ab08f9cfd691a56c25a508c8de618a1e5e23c4ef9b558aba5ef719eb9.png" />
+<img alt="../_images/6ab0499960b76fec5e5583da28c5a2e52aea38015d583fa78ec73f94d0d9647a.png" src="../_images/6ab0499960b76fec5e5583da28c5a2e52aea38015d583fa78ec73f94d0d9647a.png" />
 </div>
 </div>
 </section>
@@ -1457,7 +1451,7 @@ The `join` parameter is deprecated and will be removed in v0.15.0. You can remov
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e813c8d80e96f299db95de9a3f4e2dfe8f10775629560c034c260a540841b492.png" src="../_images/e813c8d80e96f299db95de9a3f4e2dfe8f10775629560c034c260a540841b492.png" />
+<img alt="../_images/9f0afe5aa7f30de834f585a0ee3fc55d999ab1ea20ef08af59022fd94eff4864.png" src="../_images/9f0afe5aa7f30de834f585a0ee3fc55d999ab1ea20ef08af59022fd94eff4864.png" />
 </div>
 </div>
 </section>
