@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -556,18 +556,115 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>participant</th>
+      <th>block</th>
+      <th>trial</th>
+      <th>flankers</th>
+      <th>rt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2597</th>
+      <td>s4</td>
+      <td>2</td>
+      <td>28</td>
+      <td>incongruent</td>
+      <td>0.453134</td>
+    </tr>
+    <tr>
+      <th>2922</th>
+      <td>s6</td>
+      <td>3</td>
+      <td>2</td>
+      <td>neutral</td>
+      <td>0.544545</td>
+    </tr>
+    <tr>
+      <th>4125</th>
+      <td>s5</td>
+      <td>5</td>
+      <td>29</td>
+      <td>neutral</td>
+      <td>0.426094</td>
+    </tr>
+    <tr>
+      <th>3870</th>
+      <td>s19</td>
+      <td>2</td>
+      <td>29</td>
+      <td>neutral</td>
+      <td>0.600802</td>
+    </tr>
+    <tr>
+      <th>1564</th>
+      <td>s1</td>
+      <td>5</td>
+      <td>8</td>
+      <td>neutral</td>
+      <td>0.485013</td>
+    </tr>
+    <tr>
+      <th>921</th>
+      <td>s8</td>
+      <td>4</td>
+      <td>27</td>
+      <td>congruent</td>
+      <td>0.421690</td>
+    </tr>
+    <tr>
+      <th>3444</th>
+      <td>s3</td>
+      <td>4</td>
+      <td>17</td>
+      <td>congruent</td>
+      <td>0.421145</td>
+    </tr>
+    <tr>
+      <th>854</th>
+      <td>s8</td>
+      <td>2</td>
+      <td>24</td>
+      <td>neutral</td>
+      <td>0.644778</td>
+    </tr>
+    <tr>
+      <th>972</th>
+      <td>s24</td>
+      <td>1</td>
+      <td>14</td>
+      <td>incongruent</td>
+      <td>0.692757</td>
+    </tr>
+    <tr>
+      <th>3009</th>
+      <td>s6</td>
+      <td>5</td>
+      <td>25</td>
+      <td>neutral</td>
+      <td>0.452540</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="examine-the-data-without-considering-repeated-measures">
@@ -669,7 +766,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ec8135b5df913854ae9e832c478a7f2c2065f9474641e2bfa594ba19c839b67b.png" src="../_images/ec8135b5df913854ae9e832c478a7f2c2065f9474641e2bfa594ba19c839b67b.png" />
+<img alt="../_images/e0b1c73103b82eb7c9e2b1f1d7338b3502154dd84023b247cb1e26e89f1355b3.png" src="../_images/e0b1c73103b82eb7c9e2b1f1d7338b3502154dd84023b247cb1e26e89f1355b3.png" />
 </div>
 </div>
 <p>The data show the skew that is expected of RT data — there are fundamental human performance limits on how fast a person can respond (short RTs), but the upper limit of RTs is theoretically unlimited. In the present experiment, participants actually only had a 1 s window in which to respond, so the RTs are all less than 1. Nevertheless, the data are skewed because there is a wider range of RTs above the median than below.</p>
@@ -688,7 +785,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/db6cfe62433c43b6cfc42a7affd71d0dc577f987d86d845b0b579ecb7b2d1494.png" src="../_images/db6cfe62433c43b6cfc42a7affd71d0dc577f987d86d845b0b579ecb7b2d1494.png" />
+<img alt="../_images/84a436635a97851ae31c7cff343e54d881bc0e660a273240b69839d30e3e948a.png" src="../_images/84a436635a97851ae31c7cff343e54d881bc0e660a273240b69839d30e3e948a.png" />
 </div>
 </div>
 <p>The skewed nature of the data are again evident, but we can see that not only are the median values for the three conditions different, but the bulk of values in each distribution of RTs also appear to be rather different. That is, the “humps” in the middle of each distribution are relatively non-overlapping, although neutral and incongruent are fairly similar.</p>
@@ -706,7 +803,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/332404d525189b6e8f5ef62c35812451077dd9f71a526f21c455209465ef4fb7.png" src="../_images/332404d525189b6e8f5ef62c35812451077dd9f71a526f21c455209465ef4fb7.png" />
+<img alt="../_images/14cb0eb7921252a2154df413ca938a58b7e09758fd61bd6fd50ea659455e81fc.png" src="../_images/14cb0eb7921252a2154df413ca938a58b7e09758fd61bd6fd50ea659455e81fc.png" />
 </div>
 </div>
 <p>This is really less informative than the above plots, because there are so many data points! Mostly we just see big patches of the plots for each condition with lots of individual values.</p>
@@ -725,7 +822,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/22d94b034db363932e40f6fb5485a3701736dec067f7e120f68a44059ec0245d.png" src="../_images/22d94b034db363932e40f6fb5485a3701736dec067f7e120f68a44059ec0245d.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/42/fy648srd41l966jbjlswhljc0000gr/T/ipykernel_55377/3023065820.py:1: UserWarning: 
+
+The `join` parameter is deprecated and will be removed in v0.15.0. You can remove the line between points with `linestyle=&#39;none&#39;`.
+
+  sns.catplot(kind=&#39;point&#39;, join=False,
+</pre></div>
+</div>
+<img alt="../_images/823462bc4113267d2e9b64057a9a5a52fbf146a7f2fd4a728f646c17dc4922e1.png" src="../_images/823462bc4113267d2e9b64057a9a5a52fbf146a7f2fd4a728f646c17dc4922e1.png" />
 </div>
 </div>
 <p>We can see that the CIs are quite far apart, suggesting that there are very large differences between RTs for each pair of conditions.</p>
@@ -936,7 +1040,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/38c9efddb93f24da26c538385f33d00af6946dc9ae92cb0655180e9dbc03fa3a.png" src="../_images/38c9efddb93f24da26c538385f33d00af6946dc9ae92cb0655180e9dbc03fa3a.png" />
+<img alt="../_images/c3a26acb2b63c3efa087d8359bee4ffe8647cc9ab18b626d14e0067c305956f5.png" src="../_images/c3a26acb2b63c3efa087d8359bee4ffe8647cc9ab18b626d14e0067c305956f5.png" />
 </div>
 </div>
 <p>Another way to visualize so many different box plots is with Seaborn’s <code class="docutils literal notranslate"><span class="pre">col</span></code> and <code class="docutils literal notranslate"><span class="pre">col_wrap</span></code> kwargs. On its own, <code class="docutils literal notranslate"><span class="pre">col=</span></code> will plot whatever variable you give it in separate columns — in our case, participants (rather than as different locations on the <em>x</em> axis, as shown above). Adding the <code class="docutils literal notranslate"><span class="pre">col_wrap</span></code> kwarg is necessary when the number of categories passed to <code class="docutils literal notranslate"><span class="pre">col</span></code> is large, as in our 27 participants. This kwarg tells Seaborn how many columns to put on one row before wrapping around to a new row.</p>
@@ -955,7 +1059,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c4a999fc87be6164e85d97d69ee81ac8a791188bc2bf221f9bd15c3b20d8689d.png" src="../_images/c4a999fc87be6164e85d97d69ee81ac8a791188bc2bf221f9bd15c3b20d8689d.png" />
+<img alt="../_images/b39d81fd665e19e95a6631aebffe50094a66a9137cb61881bb50a430d3c08282.png" src="../_images/b39d81fd665e19e95a6631aebffe50094a66a9137cb61881bb50a430d3c08282.png" />
 </div>
 </div>
 <p>This plot shows us that, indeed, there is variability among participants in both the median RTs and the variance (as indicated by the length of the whiskers, and the number and range of outlier points). Encouragingly, however, each individual seems to show the expected effect, of longer RTs for incongruent than congruent flakers. It also shows us that those anomalously fast RTs we saw above are contributed only by a couple of participants, again leading us to think that these are not believable data points.</p>
@@ -970,7 +1074,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7018ef93aad2b811ca8a96fcb1e09d425ec465a16ebab33ee56459242c4c634f.png" src="../_images/7018ef93aad2b811ca8a96fcb1e09d425ec465a16ebab33ee56459242c4c634f.png" />
+<img alt="../_images/fe9df5fa331dcb6ed3c6ecd6049fc7f2aa4779c60df61000c7199cae209ac836.png" src="../_images/fe9df5fa331dcb6ed3c6ecd6049fc7f2aa4779c60df61000c7199cae209ac836.png" />
 </div>
 </div>
 <p>This is not a lot more useful than the strip plot above, because Seaborn draws dots for each participant over those of previous participants. So we see lots of pink in the plot above, because that is the colour used for the last participant plotted. This is addressed by using a swarm plot (which will take a long time to execute if you try to run this, due to the large number of data points it’s trying to plot):</p>
@@ -984,39 +1088,51 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 55.9% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 73.5% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 50.8% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 72.8% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 83.8% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 69.3% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 69.1% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 81.6% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 65.3% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 73.0% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 83.8% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 69.5% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 73.0% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 83.8% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
-  warnings.warn(msg, UserWarning)
-/Users/hyosubkim/opt/anaconda3/envs/jupyter_books/lib/python3.10/site-packages/seaborn/categorical.py:3544: UserWarning: 69.5% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/seaborn/categorical.py:3399: UserWarning: 56.4% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
   warnings.warn(msg, UserWarning)
 </pre></div>
 </div>
-<img alt="../_images/9a2ebf1419fbf7bf26236d62d6162305276bc0f0a90e81c20e5b176f24563fac.png" src="../_images/9a2ebf1419fbf7bf26236d62d6162305276bc0f0a90e81c20e5b176f24563fac.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/seaborn/categorical.py:3399: UserWarning: 73.5% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
+  warnings.warn(msg, UserWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/seaborn/categorical.py:3399: UserWarning: 50.2% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
+  warnings.warn(msg, UserWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/seaborn/categorical.py:3399: UserWarning: 72.8% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
+  warnings.warn(msg, UserWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/seaborn/categorical.py:3399: UserWarning: 83.6% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
+  warnings.warn(msg, UserWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/seaborn/categorical.py:3399: UserWarning: 69.0% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
+  warnings.warn(msg, UserWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/seaborn/categorical.py:3399: UserWarning: 69.7% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
+  warnings.warn(msg, UserWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/seaborn/categorical.py:3399: UserWarning: 81.5% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
+  warnings.warn(msg, UserWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/seaborn/categorical.py:3399: UserWarning: 65.0% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
+  warnings.warn(msg, UserWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/seaborn/categorical.py:3399: UserWarning: 73.0% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
+  warnings.warn(msg, UserWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/jupyter_books/lib/python3.14/site-packages/seaborn/categorical.py:3399: UserWarning: 69.1% of the points cannot be placed; you may want to decrease the size of the markers or use stripplot.
+  warnings.warn(msg, UserWarning)
+</pre></div>
+</div>
+<img alt="../_images/dafff26fa685e78030740df4edfb74825ca1a184c239640d358b2b30f9452811.png" src="../_images/dafff26fa685e78030740df4edfb74825ca1a184c239640d358b2b30f9452811.png" />
 </div>
 </div>
 <p>However, in this case there are so many data points that only a relatively small percentage of them are actually drawn (hence the warning messages above). It’s hard to get a sense of the distributions of values for individual participants.</p>
@@ -1028,7 +1144,7 @@
 <p>Seaborn has a way of doing this “on the fly” when you generate plots, using the <code class="docutils literal notranslate"><span class="pre">units=</span></code> kwarg and passing the name of the grouping variable for repeated measures (in this case, <code class="docutils literal notranslate"><span class="pre">participant</span></code>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
            <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;participant&#39;</span><span class="p">,</span>
            <span class="n">x</span><span class="o">=</span><span class="s1">&#39;flankers&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;flankers&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1036,7 +1152,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c9afaff212d677106285306f64e5ed7f964f64bd12a8dedd27e9a20b31fdc289.png" src="../_images/c9afaff212d677106285306f64e5ed7f964f64bd12a8dedd27e9a20b31fdc289.png" />
+<img alt="../_images/fe90d7127f8ee95e44ba589ad6d33ec5f0eed9286097bc2e543fc961a726ee76.png" src="../_images/fe90d7127f8ee95e44ba589ad6d33ec5f0eed9286097bc2e543fc961a726ee76.png" />
 </div>
 </div>
 <p><strong>This is the most important figure in this lesson</strong>. Compared to the point plot with 95% CIs that we generated above for the aggregated data, the CIs in this plot are much larger than those we saw earlier, in the point plot for the un-aggregated data. In that previous plot, the width of the CIs was only about 0.005 s (5 ms). Here, with the CIs computed properly (as reflecting the variance across individuals), the width of the CIs is approximately 0.02 s (20 ms). While still small relative to the differences in the means, the CIs are nonetheless roughly 4x wider in the aggregated data.</p>
@@ -1255,7 +1371,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/32b4b65c4464506f75cd1f14a396b88e7fa1a50f65122a1b47916501c8a8b968.png" src="../_images/32b4b65c4464506f75cd1f14a396b88e7fa1a50f65122a1b47916501c8a8b968.png" />
+<img alt="../_images/5274a1b34e36dcd175b9b65971a8571b9a90dd23abf52494e7035a63c622854b.png" src="../_images/5274a1b34e36dcd175b9b65971a8571b9a90dd23abf52494e7035a63c622854b.png" />
 </div>
 </div>
 <p>Another, somewhat confusing, thing is that the order of the conditions on the <em>x</em> axis is reversed: whereas before the order was congruent- neutral - incongruent, now neutral is last. This is a consequence of the <code class="docutils literal notranslate"><span class="pre">.reset_index()</span></code> method, which led to the conditions being re-ordered alphabetically. This highlights that it’s always good to pay close attention to your plot labels!</p>
@@ -1271,7 +1387,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cc60b63aa7b6bbf4cef3120f0e888bda626718f6557258f7184345c6f2216577.png" src="../_images/cc60b63aa7b6bbf4cef3120f0e888bda626718f6557258f7184345c6f2216577.png" />
+<img alt="../_images/dec4ecf58932e61531cd22cd3294f58784d6d49beae1fccc7c664575ba344ead.png" src="../_images/dec4ecf58932e61531cd22cd3294f58784d6d49beae1fccc7c664575ba344ead.png" />
 </div>
 </div>
 <p>If you compare this to the box plot based on every data point that we generated earlier, you’ll see that the range covered by the whiskers and the box are both smaller. This is consistent with the reduced range in the data that we observed in the tables of descriptive statistics.</p>
@@ -1289,7 +1405,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e40d3d96552c939154465700cf6545ee7764946be28d299a42c25bde8e7e6b1e.png" src="../_images/e40d3d96552c939154465700cf6545ee7764946be28d299a42c25bde8e7e6b1e.png" />
+<img alt="../_images/788cd2cb8f8dbd34a44c8f04553004ee8f735d27f9878a431aafd7b8391d14d2.png" src="../_images/788cd2cb8f8dbd34a44c8f04553004ee8f735d27f9878a431aafd7b8391d14d2.png" />
 </div>
 </div>
 </section>
@@ -1307,7 +1423,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0a6b6db2bb57d717b4bfff5f718522cf6d3c3708b4eb2abd399e5cf3253c526b.png" src="../_images/0a6b6db2bb57d717b4bfff5f718522cf6d3c3708b4eb2abd399e5cf3253c526b.png" />
+<img alt="../_images/5f1fa31d54466e5360de08c042f384a82df1ec0ef6ee845949c28de8cc5fd858.png" src="../_images/5f1fa31d54466e5360de08c042f384a82df1ec0ef6ee845949c28de8cc5fd858.png" />
 </div>
 </div>
 <p>You may recall that point plots typically show means and 95% CIs, but the plot above lacks CIs. This is because in the <code class="docutils literal notranslate"><span class="pre">df_avg</span></code> DataFrame, there is only one value for each participant in each condition (because we averaged across trials). If we wanted to see CIs for each individual, we could use the un-aggregated data (<code class="docutils literal notranslate"><span class="pre">df</span></code>).</p>
@@ -1322,7 +1438,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d2961e197ae153acce62253e0a9e282edb5da856c2ee80b26daeff3c23f59b0a.png" src="../_images/d2961e197ae153acce62253e0a9e282edb5da856c2ee80b26daeff3c23f59b0a.png" />
+<img alt="../_images/200d956ab08f9cfd691a56c25a508c8de618a1e5e23c4ef9b558aba5ef719eb9.png" src="../_images/200d956ab08f9cfd691a56c25a508c8de618a1e5e23c4ef9b558aba5ef719eb9.png" />
 </div>
 </div>
 </section>
@@ -1332,7 +1448,7 @@
 <p>The CIs in the above plot don’t, however, help us to make a simple inference as to whether, across all participants, there is a significant RT difference between congruent and incongruent. The data are certainly suggestive of this, because all participants show slower RTs for incongruent. But this is where a point plot with 95% CIs, across participants, is useful:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
            <span class="n">data</span><span class="o">=</span><span class="n">df_avg</span><span class="p">,</span>
            <span class="n">x</span><span class="o">=</span><span class="s1">&#39;flankers&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;flankers&#39;</span><span class="p">,</span>
            <span class="n">order</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;congruent&#39;</span><span class="p">,</span> <span class="s1">&#39;neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;incongruent&#39;</span><span class="p">])</span>
@@ -1341,7 +1457,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/005748d85e8cd253cb9246409d653167e04edd90b262a0994ef92f9311c9322e.png" src="../_images/005748d85e8cd253cb9246409d653167e04edd90b262a0994ef92f9311c9322e.png" />
+<img alt="../_images/e813c8d80e96f299db95de9a3f4e2dfe8f10775629560c034c260a540841b492.png" src="../_images/e813c8d80e96f299db95de9a3f4e2dfe8f10775629560c034c260a540841b492.png" />
 </div>
 </div>
 </section>
