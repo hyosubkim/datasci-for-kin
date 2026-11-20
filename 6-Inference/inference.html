@@ -1338,7 +1338,7 @@ sampling distribution directly for learning purposes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">sample_estimates</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;sample_proportion&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">binwidth</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">sample_estimates</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;sample_proportion&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Sample proportions&quot;</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Sampling distribution of the sample proportion for sample size 40&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1346,7 +1346,7 @@ sampling distribution directly for learning purposes.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/68147a5f40e6822756716a313c67d2c726de938bdd95cf536eb5eded604d50b3.png" src="../_images/68147a5f40e6822756716a313c67d2c726de938bdd95cf536eb5eded604d50b3.png" />
+<img alt="../_images/9d1e6d72cd25fa647ed97f449ea51804c520e9891f519b46ed571e1eb6da5f6f.png" src="../_images/9d1e6d72cd25fa647ed97f449ea51804c520e9891f519b46ed571e1eb6da5f6f.png" />
 </div>
 </div>
 <p>The sampling distribution above appears
@@ -1368,7 +1368,7 @@ calculate the mean of the sample proportions.</p>
 </div>
 </div>
 <p>We notice that the sample proportions are centered around the population
-proportion value,0.748! In general, the mean of
+proportion value, 0.748! In general, the mean of
 the sampling distribution should be equal to the population proportion.
 This is great news because it means that the sample proportion is neither an overestimate nor an
 underestimate of the population proportion.
@@ -1808,11 +1808,13 @@ same size from it instead! This very clever technique is
 called <strong>the bootstrap</strong>.  Note that by taking many samples from our single, observed
 sample, we do not obtain the true sampling distribution, but rather an
 approximation that we call <strong>the bootstrap distribution</strong>.</p>
-<div class="alert alert-info">
-    <b>Note:</b>We must sample <i>with</i> replacement when using the bootstrap.
-Otherwise, if we had a sample of size $n$, and obtained a sample from it of
-    size $n$ <i>without</i> replacement, it would just return our original sample!
-</div><p>This section will explore how to create a bootstrap distribution from a single
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We must sample <em>with</em> replacement when using the bootstrap.
+Otherwise, if we had a sample of size n, and obtained a sample from it of
+size n <em>without</em> replacement, it would just return our original sample!</p>
+</div>
+<p>This section will explore how to create a bootstrap distribution from a single
 sample using Python.  The process is visualized in the flow chart below.
 For a sample of size <span class="math notranslate nohighlight">\(n\)</span>, you would do the following:</p>
 <ol class="arabic simple">

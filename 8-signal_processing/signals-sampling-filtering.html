@@ -673,7 +673,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/32582828750b58c58ff78baa86c87134f1ec01b7f9f31819cb61989e2754ff2c.png" src="../_images/32582828750b58c58ff78baa86c87134f1ec01b7f9f31819cb61989e2754ff2c.png" />
+<img alt="../_images/ca685ff0cf0fc4921ace0475553d54e26f8a820977300a74690d6bd8110456ed.png" src="../_images/ca685ff0cf0fc4921ace0475553d54e26f8a820977300a74690d6bd8110456ed.png" />
 </div>
 </div>
 <p>In the Figure above you can see that the peak at 12 Hz stands nicely above all the noise in the power spectral density estimate (bottom panel).</p>
@@ -714,7 +714,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/42/fy648srd41l966jbjlswhljc0000gr/T/ipykernel_57083/1124577352.py:9: MatplotlibDeprecationWarning: Passing the NFFT parameter of specgram() positionally is deprecated since Matplotlib 3.10; the parameter will become keyword-only in 3.12.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/42/fy648srd41l966jbjlswhljc0000gr/T/ipykernel_31017/1124577352.py:9: MatplotlibDeprecationWarning: Passing the NFFT parameter of specgram() positionally is deprecated since Matplotlib 3.10; the parameter will become keyword-only in 3.12.
   _, _, _, cax = ax.specgram(mtlb, 256, Fs=Fs, cmap=&#39;jet&#39;)
 </pre></div>
 </div>
@@ -939,7 +939,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d282be61c7c95b12ea561dcffe1acb43d70244647191daa5be238bbdb7b3186f.png" src="../_images/d282be61c7c95b12ea561dcffe1acb43d70244647191daa5be238bbdb7b3186f.png" />
+<img alt="../_images/086774362efcababc856e3d8cf4ee05e3d7c243074d4bc0b2cf43838722eb59e.png" src="../_images/086774362efcababc856e3d8cf4ee05e3d7c243074d4bc0b2cf43838722eb59e.png" />
 </div>
 </div>
 <p>The top panel shows position in one coordinate over time. The middle panel shows the result of taking the derivative of the position signal to obtain velocity. I have simply used the <code class="docutils literal notranslate"><span class="pre">diff()</span></code> function here to obtain a numerical estimate of the derivative, taking the forward difference. Note how much noisier it looks than the position signal. Finally the bottom panel shows the result of taking the derivative of the velocity signal, to obtain acceleration. It is so noisy one cannot even see the peaks in the acceleration signal, they are completely masked by noise.</p>
@@ -968,7 +968,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a697ddc4dc9e5e7cb09b39ee84dc448c96524168db68824840034b41fbd5bbb6.png" src="../_images/a697ddc4dc9e5e7cb09b39ee84dc448c96524168db68824840034b41fbd5bbb6.png" />
+<img alt="../_images/d8ca35540a8d066f9956851d6f93427de02505cbe5f1987ffd070eeb03350ca2.png" src="../_images/d8ca35540a8d066f9956851d6f93427de02505cbe5f1987ffd070eeb03350ca2.png" />
 </div>
 </div>
 <p>What you can see is that for the position over time, the filtered version (shown in red) doesn’t differ that much, at least not visibly, from the unfiltered version (in blue). The velocity and acceleration traces however look vastly different. Differentiating the filtered position signal yields a velocity trace (shown in red in the middle panel) that is way less noisy than the original version. Taking the derivative again of this new velocity signal yields an acceleration signal (shown in red in the bottom panel) that is actually usable. The original version (shown in blue) is so noisy it overwhelms the entire panel. Note the scale change on the ordinate.</p>
